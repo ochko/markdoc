@@ -1,0 +1,22 @@
+visit registration page
+enter email address
+if new user
+  fill in registration form
+  submit
+  if validation error
+    fix registration form
+    review fix
+    submit
+  else
+    submit
+  end
+else
+  enter password
+  if password wrong
+    ask password again
+  else
+    good to go
+  end
+  confirm user info
+end
+confirm course summary

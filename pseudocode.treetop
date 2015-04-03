@@ -1,0 +1,37 @@
+grammar Pseudocode
+  rule expression
+    (if / action )+ <ExpressionLiteral>
+  end
+
+  rule if
+    'if' cond:sentence
+    newline yes:expression
+    'else' newline no:expression
+    'end' newline
+    <IfLiteral>
+  end
+
+  rule keywords
+    'if' / 'else' / 'end'
+  end
+
+  rule action
+    sentence newline <ActionLiteral>
+  end
+
+  rule sentence
+    ( !keywords word )+ <SentenceLiteral>
+  end
+
+  rule word
+    [a-zA-Z0-9 ]+
+  end
+
+  rule space
+    [ ]
+  end
+
+  rule newline
+    space* [\n]+ space*
+  end
+end
