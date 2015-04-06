@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+# Sequence definition to image converter using sequence.pic macros.
+#   http://www.umlgraph.org/doc/seq-intro.html
+#
+# Usage:
+#   sequence2svg example.sequence > example.svg
+
+require 'markdoc'
+input = ARGV[0] ? IO.read(ARGV[0]) : ARGF.read
+puts Markdoc::Sequence.draw(input)

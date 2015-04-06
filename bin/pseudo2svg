@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+# Pseudo code to Graphviz converter
+#
+# Usage:
+#   pseudo2svg example.pseudo > example.svg
+
+require 'markdoc'
+input = ARGV[0] ? IO.read(ARGV[0]) : ARGF.read
+puts Markdoc::Pseudocode.draw(input)

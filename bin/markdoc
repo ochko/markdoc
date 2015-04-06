@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'markdoc'
+
+input = ARGV[0] ? IO.read(ARGV[0]) : ARGF.read
+
+puts Markdoc.render(input)
