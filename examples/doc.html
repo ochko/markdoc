@@ -1,0 +1,656 @@
+<html>
+<head>
+  <title>Doc</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+html {
+	background:#fff;
+	margin:0;
+	padding:0;
+}
+body {
+	font: 14px helvetica,arial,freesans,clean,sans-serif;
+	line-height: 1.6;
+	margin: 0 auto;
+  padding: 20px;
+	text-align:left;
+	color: #333;
+	width:920px;
+}
+
+.md {
+	background-color: #eee;
+	border-radius:3px;
+  margin: 0;
+	padding:3px;
+}
+
+article {
+  padding: 30px;
+  border: 1px solid #cacaca;
+  background-color: white;
+}
+article > :first-child {
+  margin-top: 0!important;
+}
+
+h1 {
+	font-size:28px;
+	margin-bottom:10px;
+  color: black;
+}
+
+h2 {
+	font-size:24px;
+	margin:20px 0 10px;
+  color: black;
+  border-bottom: 1px solid #ccc;
+  page-break-after: avoid;
+       break-after: avoid;
+}
+
+h3 {
+	font-size:18px;
+	margin:20px 0 10px;
+}
+
+h4 {
+	font-size:16px;
+	font-weight:bold;
+	margin:20px 0 10px;
+}
+
+h5 {
+	font-size:14px;
+	font-weight:bold;
+	margin:20px 0 10px;
+}
+
+h6 {
+	color:#777;
+	font-size:14px;
+	font-weight:bold;
+	margin:20px 0 10px;
+  page-break-before: always;
+       break-before: always;
+}
+
+hr {
+	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+	border: 0 none;
+	height: 4px;
+	margin: 15px 0;
+	padding: 0;
+}
+
+
+p {
+	margin: 15px 0;
+}
+
+pre, code {
+	font: 12px 'Bitstream Vera Sans Mono','Courier',monospace;
+}
+.highlight pre, pre {
+	background-color:#f8f8f8;
+	border:1px solid #ccc;
+	font-size:13px;
+	line-height:19px;
+	overflow:auto;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	padding:6px 10px;
+}
+
+
+
+code {
+	white-space:nowrap;
+	border:1px solid #eaeaea;
+	background-color:#f8f8f8;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	margin:0 2px;
+	padding:0 5px;
+}
+
+pre>code
+{
+	white-space:pre;
+	border:none;
+	background:transparent;
+	margin:0;
+	padding:0;
+}
+
+a, a code {
+	color: #4183C4;
+	text-decoration:none;
+}
+
+
+blockquote
+{
+	border-left:4px solid #ddd;
+	padding-left:11px;
+	color:#555;
+	margin:14px 0;
+}
+
+table
+{
+  font-size: 14px;
+	border-collapse:collapse;
+	margin:20px 0 0;
+	padding:0;
+}
+
+table tr
+{
+	border-top:1px solid #ccc;
+	background-color:#fff;
+	margin:0;
+	padding:0;
+}
+
+table tr:nth-child(2n)
+{
+	background-color:#f8f8f8;
+}
+table tr th[align="center"], table tr td[align="center"] {
+	text-align:center;
+}
+table tr th, table tr td
+{
+	border:1px solid #ccc;
+	text-align:left;
+	margin:0;
+	padding:6px 13px;
+}
+
+ul, ol
+{
+	margin:15px 0;
+}
+
+ul li, ol li
+{
+	margin-top:7px;
+	margin-bottom:7px;
+}
+
+
+
+.shadow {
+	-webkit-box-shadow:0 5px 15px #000;
+	-moz-box-shadow:0 5px 15px #000;
+	box-shadow:0 5px 15px #000;
+}
+
+svg {
+}
+
+.svg-holder {
+  max-width: 100%;
+  overflow: auto;
+  text-align: center;
+  page-break-before: avoid;
+       break-before: avoid;
+}
+
+.page-break {
+  page-break-after: always;
+       break-after: always;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+@media print {
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+  svg {
+    max-height: 240mm;
+    max-width: 190mm;
+  }
+}
+.hll { background-color: #ffffcc }
+.c { color: #408080; font-style: italic } /* Comment */
+.err { border: 1px solid #FF0000 } /* Error */
+.k { color: #008000; font-weight: bold } /* Keyword */
+.o { color: #666666 } /* Operator */
+.cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.cp { color: #BC7A00 } /* Comment.Preproc */
+.c1 { color: #408080; font-style: italic } /* Comment.Single */
+.cs { color: #408080; font-style: italic } /* Comment.Special */
+.gd { color: #A00000 } /* Generic.Deleted */
+.ge { font-style: italic } /* Generic.Emph */
+.gr { color: #FF0000 } /* Generic.Error */
+.gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.gi { color: #00A000 } /* Generic.Inserted */
+.go { color: #888888 } /* Generic.Output */
+.gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.gs { font-weight: bold } /* Generic.Strong */
+.gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.gt { color: #0044DD } /* Generic.Traceback */
+.kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.kp { color: #008000 } /* Keyword.Pseudo */
+.kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.kt { color: #B00040 } /* Keyword.Type */
+.m { color: #666666 } /* Literal.Number */
+.s { color: #BA2121 } /* Literal.String */
+.na { color: #7D9029 } /* Name.Attribute */
+.nb { color: #008000 } /* Name.Builtin */
+.nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.no { color: #880000 } /* Name.Constant */
+.nd { color: #AA22FF } /* Name.Decorator */
+.ni { color: #999999; font-weight: bold } /* Name.Entity */
+.ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.nf { color: #0000FF } /* Name.Function */
+.nl { color: #A0A000 } /* Name.Label */
+.nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.nt { color: #008000; font-weight: bold } /* Name.Tag */
+.nv { color: #19177C } /* Name.Variable */
+.ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.w { color: #bbbbbb } /* Text.Whitespace */
+.mb { color: #666666 } /* Literal.Number.Bin */
+.mf { color: #666666 } /* Literal.Number.Float */
+.mh { color: #666666 } /* Literal.Number.Hex */
+.mi { color: #666666 } /* Literal.Number.Integer */
+.mo { color: #666666 } /* Literal.Number.Oct */
+.sb { color: #BA2121 } /* Literal.String.Backtick */
+.sc { color: #BA2121 } /* Literal.String.Char */
+.sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.s2 { color: #BA2121 } /* Literal.String.Double */
+.se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.sh { color: #BA2121 } /* Literal.String.Heredoc */
+.si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.sx { color: #008000 } /* Literal.String.Other */
+.sr { color: #BB6688 } /* Literal.String.Regex */
+.s1 { color: #BA2121 } /* Literal.String.Single */
+.ss { color: #19177C } /* Literal.String.Symbol */
+.bp { color: #008000 } /* Name.Builtin.Pseudo */
+.vc { color: #19177C } /* Name.Variable.Class */
+.vg { color: #19177C } /* Name.Variable.Global */
+.vi { color: #19177C } /* Name.Variable.Instance */
+.il { color: #666666 } /* Literal.Number.Integer.Long */
+  </style>
+</head>
+<body>
+
+<h1>Registration page</h1>
+
+<h2>Typical Member Registration Flow (Signup Scenarios)</h2>
+
+<p>WP eMember was designed in a way so you (as the admin) have some customization freedom as to how the membership registration/signup flows on your membership site.</p>
+
+<p>It is a good idea to read this post first and make up you mind on how you want your registration process to flow before you start setting eMember up.</p>
+
+<p>If you are not sure about the difference between a “Join Us” page and a “Registration” page then read this post first.</p>
+
+<ol>
+<li>Visitors land on your site.</li>
+<li>Want to become a member after seeing some of the awesome content.</li>
+<li>Follows the “Join Us” link.</li>
+<li>The above mentioned link will take them to the “Membership Join Us” Page where you have explained all the different types of membership you offer. It may look similar to the one here.</li>
+<li>From this page they can decide which membership option they want to choose (eg. Free, Silver, Gold or whatever you are offering)</li>
+<li>If they choose the “Free Membership” then they just follow the link and sign up for a free membership. Remember, the free membership sign up is only possible if you (the admin) allow free membership on your site.</li>
+<li>If they choose a “Paid Membership” then they make a payment by clicking on the payment button for the appropriate membership.</li>
+<li>Once the Payment is confirmed (at this point the plugin knows what type of membership this member wants), the plugin will create the appropriate membership account for this visitor.</li>
+<li>The member will receive an email that contains a “unique” link to complete the registration.</li>
+<li>When the member clicks on that link in the email it will let them choose a “username” and “password” and complete the registration. At this point the member can log into the site.</li>
+</ol>
+
+<p class="page-break"><!-- break --></p>
+
+<h2>Flows</h2>
+<div class="svg-holder">
+
+
+
+
+<svg width="428pt" height="775pt"
+ viewBox="0.00 0.00 427.68 775.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 771)">
+<title>G</title>
+<polygon fill="white" stroke="none" points="-4,4 -4,-771 423.677,-771 423.677,4 -4,4"/>
+
+<g id="node1" class="node"><title>N1</title>
+<polygon fill="none" stroke="black" points="240.536,-767 102.928,-767 102.928,-731 240.536,-731 240.536,-767"/>
+<text text-anchor="middle" x="171.732" y="-744.8" font-family="Times,serif" font-size="14.00">visit registration page</text>
+</g>
+
+<g id="node2" class="node"><title>N2</title>
+<polygon fill="none" stroke="black" points="233.795,-694 109.67,-694 109.67,-658 233.795,-658 233.795,-694"/>
+<text text-anchor="middle" x="171.732" y="-671.8" font-family="Times,serif" font-size="14.00">enter email address</text>
+</g>
+
+<g id="edge1" class="edge"><title>N1&#45;&gt;N2</title>
+<path fill="none" stroke="black" d="M171.732,-730.813C171.732,-722.789 171.732,-713.047 171.732,-704.069"/>
+<polygon fill="black" stroke="black" points="175.233,-704.029 171.732,-694.029 168.233,-704.029 175.233,-704.029"/>
+</g>
+
+<g id="node3" class="node"><title>N3</title>
+<polygon fill="none" stroke="black" points="171.732,-621 112.548,-603 171.732,-585 230.917,-603 171.732,-621"/>
+<text text-anchor="middle" x="171.732" y="-598.8" font-family="Times,serif" font-size="14.00">new user</text>
+</g>
+
+<g id="edge15" class="edge"><title>N2&#45;&gt;N3</title>
+<path fill="none" stroke="black" d="M171.732,-657.813C171.732,-649.789 171.732,-640.047 171.732,-631.069"/>
+<polygon fill="black" stroke="black" points="175.233,-631.029 171.732,-621.029 168.233,-631.029 175.233,-631.029"/>
+</g>
+
+<g id="node4" class="node"><title>N4</title>
+<polygon fill="none" stroke="black" points="174.66,-535 30.8047,-535 30.8047,-499 174.66,-499 174.66,-535"/>
+<text text-anchor="middle" x="102.732" y="-512.8" font-family="Times,serif" font-size="14.00">fill in registration form</text>
+</g>
+
+<g id="edge8" class="edge"><title>N3&#45;&gt;N4</title>
+<path fill="none" stroke="black" d="M160.338,-588.129C150.262,-575.862 135.319,-557.67 123.177,-542.889"/>
+<polygon fill="black" stroke="black" points="125.82,-540.593 116.768,-535.087 120.411,-545.036 125.82,-540.593"/>
+<text text-anchor="middle" x="151.921" y="-555.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+
+<g id="node11" class="node"><title>N11</title>
+<polygon fill="none" stroke="black" points="309.095,-535 208.369,-535 208.369,-499 309.095,-499 309.095,-535"/>
+<text text-anchor="middle" x="258.732" y="-512.8" font-family="Times,serif" font-size="14.00">enter password</text>
+</g>
+
+<g id="edge14" class="edge"><title>N3&#45;&gt;N11</title>
+<path fill="none" stroke="black" d="M185.326,-588.875C198.222,-576.424 217.915,-557.41 233.658,-542.21"/>
+<polygon fill="black" stroke="black" points="236.259,-544.564 241.022,-535.1 231.397,-539.528 236.259,-544.564"/>
+<text text-anchor="middle" x="229.288" y="-555.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+
+<g id="node5" class="node"><title>N5</title>
+<polygon fill="none" stroke="black" points="119.85,-462 65.6151,-462 65.6151,-426 119.85,-426 119.85,-462"/>
+<text text-anchor="middle" x="92.7324" y="-439.8" font-family="Times,serif" font-size="14.00">submit</text>
+</g>
+
+<g id="edge2" class="edge"><title>N4&#45;&gt;N5</title>
+<path fill="none" stroke="black" d="M100.312,-498.813C99.1817,-490.789 97.8096,-481.047 96.545,-472.069"/>
+<polygon fill="black" stroke="black" points="99.9914,-471.443 95.1309,-462.029 93.0598,-472.419 99.9914,-471.443"/>
+</g>
+
+<g id="node6" class="node"><title>N6</title>
+<polygon fill="none" stroke="black" points="91.7324,-376 -0.233029,-358 91.7324,-340 183.698,-358 91.7324,-376"/>
+<text text-anchor="middle" x="91.7324" y="-353.8" font-family="Times,serif" font-size="14.00">validation error</text>
+</g>
+
+<g id="edge7" class="edge"><title>N5&#45;&gt;N6</title>
+<path fill="none" stroke="black" d="M92.5252,-425.595C92.3903,-414.257 92.2113,-399.227 92.0576,-386.315"/>
+<polygon fill="black" stroke="black" points="95.5548,-386.053 91.936,-376.095 88.5553,-386.136 95.5548,-386.053"/>
+</g>
+
+<g id="node7" class="node"><title>N7</title>
+<polygon fill="none" stroke="black" points="146.991,-290 18.4734,-290 18.4734,-254 146.991,-254 146.991,-290"/>
+<text text-anchor="middle" x="82.7324" y="-267.8" font-family="Times,serif" font-size="14.00">fix registration form</text>
+</g>
+
+<g id="edge5" class="edge"><title>N6&#45;&gt;N7</title>
+<path fill="none" stroke="black" d="M89.9112,-340.001C88.6993,-328.691 87.0799,-313.576 85.6859,-300.566"/>
+<polygon fill="black" stroke="black" points="89.1274,-299.832 84.5819,-290.262 82.1672,-300.578 89.1274,-299.832"/>
+<text text-anchor="middle" x="98.9214" y="-310.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+
+<g id="node10" class="node"><title>N10</title>
+<polygon fill="none" stroke="black" points="201.85,-236 147.615,-236 147.615,-200 201.85,-200 201.85,-236"/>
+<text text-anchor="middle" x="174.732" y="-213.8" font-family="Times,serif" font-size="14.00">submit</text>
+</g>
+
+<g id="edge6" class="edge"><title>N6&#45;&gt;N10</title>
+<path fill="none" stroke="black" d="M109.195,-343.119C123.704,-330.681 143.833,-311.175 155.732,-290 163.304,-276.526 167.965,-259.908 170.773,-246.137"/>
+<polygon fill="black" stroke="black" points="174.223,-246.727 172.578,-236.261 167.337,-245.469 174.223,-246.727"/>
+<text text-anchor="middle" x="151.288" y="-310.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+
+<g id="node8" class="node"><title>N8</title>
+<polygon fill="none" stroke="black" points="143.212,-182 50.2529,-182 50.2529,-146 143.212,-146 143.212,-182"/>
+<text text-anchor="middle" x="96.7324" y="-159.8" font-family="Times,serif" font-size="14.00">review the fix</text>
+</g>
+
+<g id="edge3" class="edge"><title>N7&#45;&gt;N8</title>
+<path fill="none" stroke="black" d="M84.9818,-253.969C87.1731,-237.378 90.5404,-211.883 93.1095,-192.431"/>
+<polygon fill="black" stroke="black" points="96.6026,-192.713 94.4422,-182.341 89.6628,-191.796 96.6026,-192.713"/>
+</g>
+
+<g id="node9" class="node"><title>N9</title>
+<polygon fill="none" stroke="black" points="140.85,-109 86.6151,-109 86.6151,-73 140.85,-73 140.85,-109"/>
+<text text-anchor="middle" x="113.732" y="-86.8" font-family="Times,serif" font-size="14.00">submit</text>
+</g>
+
+<g id="edge4" class="edge"><title>N8&#45;&gt;N9</title>
+<path fill="none" stroke="black" d="M100.848,-145.813C102.79,-137.702 105.152,-127.836 107.321,-118.777"/>
+<polygon fill="black" stroke="black" points="110.73,-119.569 109.655,-109.029 103.923,-117.939 110.73,-119.569"/>
+</g>
+
+<g id="node16" class="node"><title>N16</title>
+<polygon fill="none" stroke="black" points="251.095,-36 98.3701,-36 98.3701,-0 251.095,-0 251.095,-36"/>
+<text text-anchor="middle" x="174.732" y="-13.8" font-family="Times,serif" font-size="14.00">confirm registration info</text>
+</g>
+
+<g id="edge16" class="edge"><title>N9&#45;&gt;N16</title>
+<path fill="none" stroke="black" d="M128.499,-72.8129C135.992,-64.0918 145.229,-53.3402 153.472,-43.7459"/>
+<polygon fill="black" stroke="black" points="156.24,-45.8947 160.102,-36.0288 150.931,-41.333 156.24,-45.8947"/>
+</g>
+
+<g id="edge17" class="edge"><title>N10&#45;&gt;N16</title>
+<path fill="none" stroke="black" d="M174.732,-199.775C174.732,-165.314 174.732,-87.6454 174.732,-46.2236"/>
+<polygon fill="black" stroke="black" points="178.233,-46.044 174.732,-36.044 171.233,-46.0441 178.233,-46.044"/>
+</g>
+
+<g id="node12" class="node"><title>N12</title>
+<polygon fill="none" stroke="black" points="263.732,-462 166.997,-444 263.732,-426 360.468,-444 263.732,-462"/>
+<text text-anchor="middle" x="263.732" y="-439.8" font-family="Times,serif" font-size="14.00">password wrong</text>
+</g>
+
+<g id="edge11" class="edge"><title>N11&#45;&gt;N12</title>
+<path fill="none" stroke="black" d="M259.943,-498.813C260.508,-490.789 261.194,-481.047 261.826,-472.069"/>
+<polygon fill="black" stroke="black" points="265.322,-472.25 262.533,-462.029 258.339,-471.758 265.322,-472.25"/>
+</g>
+
+<g id="node13" class="node"><title>N13</title>
+<polygon fill="none" stroke="black" points="326.095,-376 201.37,-376 201.37,-340 326.095,-340 326.095,-376"/>
+<text text-anchor="middle" x="263.732" y="-353.8" font-family="Times,serif" font-size="14.00">ask password again</text>
+</g>
+
+<g id="edge9" class="edge"><title>N12&#45;&gt;N13</title>
+<path fill="none" stroke="black" d="M263.732,-425.595C263.732,-414.257 263.732,-399.227 263.732,-386.315"/>
+<polygon fill="black" stroke="black" points="267.233,-386.095 263.732,-376.095 260.233,-386.095 267.233,-386.095"/>
+<text text-anchor="middle" x="273.921" y="-396.8" font-family="Times,serif" font-size="14.00">Yes</text>
+</g>
+
+<g id="node14" class="node"><title>N14</title>
+<polygon fill="none" stroke="black" points="419.622,-376 343.843,-376 343.843,-340 419.622,-340 419.622,-376"/>
+<text text-anchor="middle" x="381.732" y="-353.8" font-family="Times,serif" font-size="14.00">good to go</text>
+</g>
+
+<g id="edge10" class="edge"><title>N12&#45;&gt;N14</title>
+<path fill="none" stroke="black" d="M282.691,-429.504C300.635,-416.73 327.936,-397.296 349.333,-382.064"/>
+<polygon fill="black" stroke="black" points="351.389,-384.896 357.506,-376.246 347.33,-379.194 351.389,-384.896"/>
+<text text-anchor="middle" x="338.288" y="-396.8" font-family="Times,serif" font-size="14.00">No</text>
+</g>
+
+<g id="node15" class="node"><title>N15</title>
+<polygon fill="none" stroke="black" points="334.868,-290 202.597,-290 202.597,-254 334.868,-254 334.868,-290"/>
+<text text-anchor="middle" x="268.732" y="-267.8" font-family="Times,serif" font-size="14.00">confirm account info</text>
+</g>
+
+<g id="edge12" class="edge"><title>N13&#45;&gt;N15</title>
+<path fill="none" stroke="black" d="M264.768,-339.595C265.443,-328.257 266.338,-313.227 267.107,-300.315"/>
+<polygon fill="black" stroke="black" points="270.614,-300.285 267.715,-290.095 263.627,-299.869 270.614,-300.285"/>
+</g>
+
+<g id="edge13" class="edge"><title>N14&#45;&gt;N15</title>
+<path fill="none" stroke="black" d="M358.593,-339.799C341.682,-327.228 318.561,-310.04 300.006,-296.248"/>
+<polygon fill="black" stroke="black" points="301.955,-293.335 291.841,-290.178 297.779,-298.953 301.955,-293.335"/>
+</g>
+
+<g id="edge18" class="edge"><title>N15&#45;&gt;N16</title>
+<path fill="none" stroke="black" d="M262.565,-253.781C249.347,-216.987 217.176,-128.024 188.732,-54 187.676,-51.2509 186.559,-48.3869 185.434,-45.5332"/>
+<polygon fill="black" stroke="black" points="188.611,-44.0507 181.662,-36.0532 182.107,-46.6386 188.611,-44.0507"/>
+</g>
+</g>
+</svg>
+
+</div>
+<p class="page-break"><!-- break --></p>
+
+<h2>Sequence</h2>
+<div class="svg-holder">
+
+
+<svg version="1.1" baseProfile="full" id="body" width="8in" height="8in" viewBox="0 0 1 1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+<title>SVG drawing</title>
+<desc>This was produced by version 4.4 of GNU libplot, a free library for exporting 2-D vector graphics.</desc>
+<rect id="background" x="0" y="0" width="1" height="1" stroke="none" fill="white"/>
+<g id="content" transform="translate(0.05,0.21875) scale(1,-1) scale(0.125) " xml:space="preserve" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.433" stroke-dasharray="none" stroke-dashoffset="0" stroke-opacity="1" fill="none" fill-rule="evenodd" fill-opacity="1" font-style="normal" font-variant="normal" font-weight="normal" font-stretch="normal" font-size-adjust="none" letter-spacing="normal" word-spacing="normal" text-anchor="start">
+<circle cx="0.15" cy="0.19" r="0.06" stroke-width="0.0094118" />
+<line x1="0.15" y1="0.13" x2="0.15" y2="0.01" stroke-width="0.0094118" />
+<line x1="0" y1="0.11" x2="0.3" y2="0.11" stroke-width="0.0094118" />
+<line x1="0.15" y1="0.01" x2="0.07" y2="-0.14" stroke-width="0.0094118" />
+<line x1="0.15" y1="0.01" x2="0.23" y2="-0.14" stroke-width="0.0094118" />
+<text transform="translate(-0.089375,-0.29903) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Student</text>
+<rect x="1.05" y="-0.25" width="1.3" height="0.5" stroke-width="0.0094118" />
+<text transform="translate(1.3333,-0.049028) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Partner Site</text>
+<rect x="3.1" y="-0.25" width="1.3" height="0.5" stroke-width="0.0094118" />
+<text transform="translate(3.4644,-0.049028) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Web App</text>
+<rect x="5.15" y="-0.25" width="1.3" height="0.5" stroke-width="0.0094118" />
+<text transform="translate(5.5414,-0.049028) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Reg API</text>
+<line x1="0.15" y1="-0.3" x2="0.15" y2="-0.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="0.1" y1="-0.25" x2="0.2" y2="-0.25" stroke-width="0.0094118" />
+<line x1="0.21" y1="-0.5" x2="1.64" y2="-0.5" stroke-width="0.0094118" />
+<polygon points="1.54,-0.475 1.64,-0.5 1.54,-0.525 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(0.36542,-0.46569) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Choose course(S)</text>
+<text transform="translate(0.90569,-0.63236) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="1.7" y1="-0.25" x2="1.7" y2="-0.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="1.65" y1="-0.5" x2="1.75" y2="-0.5" stroke-width="0.0094118" />
+<line x1="0.1" y1="-0.25" x2="0.1" y2="-0.5" stroke-width="0.0094118" />
+<line x1="0.2" y1="-0.25" x2="0.2" y2="-0.5" stroke-width="0.0094118" />
+<line x1="0.1" y1="-0.5" x2="0.2" y2="-0.5" stroke-width="0.0094118" />
+<line x1="1.76" y1="-0.75" x2="5.74" y2="-0.75" stroke-width="0.0094118" />
+<polygon points="5.64,-0.725 5.74,-0.75 5.64,-0.775 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(3.2638,-0.71569) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Issue key for(S)</text>
+<text transform="translate(3.7307,-0.88236) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="5.8" y1="-0.25" x2="5.8" y2="-0.75" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="5.75" y1="-0.75" x2="5.85" y2="-0.75" stroke-width="0.0094118" />
+<line x1="5.74" y1="-1" x2="1.76" y2="-1" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<polygon points="1.86,-1.025 1.76,-1 1.86,-0.975 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(3.1596,-0.96569) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Registration key(K)</text>
+<text transform="translate(3.7307,-1.1324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="5.75" y1="-0.75" x2="5.75" y2="-1" stroke-width="0.0094118" />
+<line x1="5.85" y1="-0.75" x2="5.85" y2="-1" stroke-width="0.0094118" />
+<line x1="5.75" y1="-1" x2="5.85" y2="-1" stroke-width="0.0094118" />
+<line x1="1.76" y1="-1.25" x2="3.69" y2="-1.25" stroke-width="0.0094118" />
+<polygon points="3.59,-1.225 3.69,-1.25 3.59,-1.275 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(2.1038,-1.2157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Register with key(K)</text>
+<text transform="translate(2.7057,-1.3824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="3.75" y1="-0.25" x2="3.75" y2="-1.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="3.7" y1="-1.25" x2="3.8" y2="-1.25" stroke-width="0.0094118" />
+<line x1="1.65" y1="-0.5" x2="1.65" y2="-1.25" stroke-width="0.0094118" />
+<line x1="1.75" y1="-0.5" x2="1.75" y2="-1.25" stroke-width="0.0094118" />
+<line x1="1.65" y1="-1.25" x2="1.75" y2="-1.25" stroke-width="0.0094118" />
+<line x1="3.69" y1="-1.5" x2="0.21" y2="-1.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<polygon points="0.31,-1.525 0.21,-1.5 0.31,-1.475 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(1.4213,-1.4657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Registration form</text>
+<text transform="translate(1.9307,-1.6324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="0.15" y1="-0.5" x2="0.15" y2="-1.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="0.1" y1="-1.5" x2="0.2" y2="-1.5" stroke-width="0.0094118" />
+<line x1="0.21" y1="-1.75" x2="3.69" y2="-1.75" stroke-width="0.0094118" />
+<polygon points="3.59,-1.725 3.69,-1.75 3.59,-1.775 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(1.4986,-1.7157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Fill the form(F)</text>
+<text transform="translate(1.9307,-1.8824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="0.1" y1="-1.5" x2="0.1" y2="-1.75" stroke-width="0.0094118" />
+<line x1="0.2" y1="-1.5" x2="0.2" y2="-1.75" stroke-width="0.0094118" />
+<line x1="0.1" y1="-1.75" x2="0.2" y2="-1.75" stroke-width="0.0094118" />
+<polyline points="3.81,-2 4.31,-2 4.31,-2.25 3.81,-2.25 " stroke-width="0.0094118" />
+<polygon points="3.91,-2.275 3.81,-2.25 3.91,-2.225 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(3.81,-1.924) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Save the form(F)</text>
+<text transform="translate(3.7907,-2.0907) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<text transform="translate(3.7907,-2.2574) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<text transform="translate(3.7907,-2.424) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="3.81" y1="-2.5" x2="5.74" y2="-2.5" stroke-width="0.0094118" />
+<polygon points="5.64,-2.475 5.74,-2.5 5.64,-2.525 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(4.3428,-2.4657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Register(K, F)</text>
+<text transform="translate(4.7557,-2.6324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="5.8" y1="-2.5" x2="6.3" y2="-2.3" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<text transform="translate(6.4799,-2.349) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >New API</text>
+<polygon points="6.3,-2.15 7.1,-2.15 7.2,-2.25 7.2,-2.45 6.3,-2.45 " stroke-width="0.0094118" />
+<polyline points="7.1,-2.15 7.1,-2.25 7.2,-2.25 " stroke-width="0.0094118" />
+<line x1="5.8" y1="-1" x2="5.8" y2="-2.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="5.75" y1="-2.5" x2="5.85" y2="-2.5" stroke-width="0.0094118" />
+<line x1="3.7" y1="-1.25" x2="3.7" y2="-2.5" stroke-width="0.0094118" />
+<line x1="3.8" y1="-1.25" x2="3.8" y2="-2.5" stroke-width="0.0094118" />
+<line x1="3.7" y1="-2.5" x2="3.8" y2="-2.5" stroke-width="0.0094118" />
+<polyline points="5.86,-2.75 6.36,-2.75 6.36,-3 5.86,-3 " stroke-width="0.0094118" />
+<polygon points="5.96,-3.025 5.86,-3 5.96,-2.975 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(5.86,-2.674) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Create course</text>
+<text transform="translate(5.8407,-2.8407) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<text transform="translate(5.8407,-3.0074) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<text transform="translate(5.8407,-3.174) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="5.74" y1="-3.25" x2="3.81" y2="-3.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<polygon points="3.91,-3.275 3.81,-3.25 3.91,-3.225 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(4.2348,-3.2157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Course details(C)</text>
+<text transform="translate(4.7557,-3.3824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="3.75" y1="-2.5" x2="3.75" y2="-3.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="3.7" y1="-3.25" x2="3.8" y2="-3.25" stroke-width="0.0094118" />
+<line x1="5.75" y1="-2.5" x2="5.75" y2="-3.25" stroke-width="0.0094118" />
+<line x1="5.85" y1="-2.5" x2="5.85" y2="-3.25" stroke-width="0.0094118" />
+<line x1="5.75" y1="-3.25" x2="5.85" y2="-3.25" stroke-width="0.0094118" />
+<polyline points="3.81,-3.5 4.31,-3.5 4.31,-3.75 3.81,-3.75 " stroke-width="0.0094118" />
+<polygon points="3.91,-3.775 3.81,-3.75 3.91,-3.725 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(3.81,-3.424) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Save(C)</text>
+<text transform="translate(3.7907,-3.5907) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<text transform="translate(3.7907,-3.7574) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<text transform="translate(3.7907,-3.924) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="3.69" y1="-4" x2="0.21" y2="-4" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<polygon points="0.31,-4.025 0.21,-4 0.31,-3.975 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(1.2438,-3.9657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Show course summary</text>
+<text transform="translate(1.9307,-4.1324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="0.15" y1="-1.75" x2="0.15" y2="-4" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="0.1" y1="-4" x2="0.2" y2="-4" stroke-width="0.0094118" />
+<line x1="3.7" y1="-3.25" x2="3.7" y2="-4" stroke-width="0.0094118" />
+<line x1="3.8" y1="-3.25" x2="3.8" y2="-4" stroke-width="0.0094118" />
+<line x1="3.7" y1="-4" x2="3.8" y2="-4" stroke-width="0.0094118" />
+<line x1="0.21" y1="-4.25" x2="5.74" y2="-4.25" stroke-width="0.0094118" />
+<polygon points="5.64,-4.225 5.74,-4.25 5.64,-4.275 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(2.4269,-4.2157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Click study button</text>
+<text transform="translate(2.9557,-4.3824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="5.8" y1="-3.25" x2="5.8" y2="-4.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="5.75" y1="-4.25" x2="5.85" y2="-4.25" stroke-width="0.0094118" />
+<line x1="5.74" y1="-4.5" x2="0.21" y2="-4.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<polygon points="0.31,-4.525 0.21,-4.5 0.31,-4.475 " stroke-width="0.0094118" fill="black" />
+<text transform="translate(2.535,-4.4657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Show mypage</text>
+<text transform="translate(2.9557,-4.6324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
+<line x1="0.1" y1="-4" x2="0.1" y2="-4.75" stroke-width="0.0094118" />
+<line x1="0.2" y1="-4" x2="0.2" y2="-4.75" stroke-width="0.0094118" />
+<line x1="0.1" y1="-4.75" x2="0.2" y2="-4.75" stroke-width="0.0094118" />
+<line x1="1.7" y1="-1.25" x2="1.7" y2="-4.75" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="3.75" y1="-4" x2="3.75" y2="-4.75" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
+<line x1="5.75" y1="-4.25" x2="5.75" y2="-4.75" stroke-width="0.0094118" />
+<line x1="5.85" y1="-4.25" x2="5.85" y2="-4.75" stroke-width="0.0094118" />
+<line x1="5.75" y1="-4.75" x2="5.85" y2="-4.75" stroke-width="0.0094118" />
+</g>
+</svg>
+
+</div>
+<h2>Example</h2>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">block_code</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span>
+  <span class="k">case</span> <span class="n">language</span>
+  <span class="k">when</span> <span class="s1">&#39;pseudo&#39;</span><span class="p">,</span> <span class="s1">&#39;pseudocode&#39;</span>
+    <span class="n">wrap_svg</span> <span class="no">Pseudocode</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+  <span class="k">when</span> <span class="s1">&#39;seq&#39;</span><span class="p">,</span> <span class="s1">&#39;sequence&#39;</span>
+    <span class="n">wrap_svg</span> <span class="no">Sequence</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">code</span><span class="p">)</span>
+  <span class="k">else</span>
+    <span class="no">Pygments</span><span class="o">.</span><span class="n">highlight</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="ss">lexer</span><span class="p">:</span> <span class="n">language</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div></body>
+</html>
