@@ -1,6 +1,6 @@
 module Markdoc
   module Sequence
-    def self.draw(code)
+    def self.draw(code, format = :svg)
       parser = Parser.new(code)
 
       digest = Digest::MD5.hexdigest code
@@ -11,10 +11,14 @@ module Markdoc
         pic = file.path
       end
 
-      image = Tempfile.new([digest, '.svg'])
+      if format == :pic
+        return IO.read(pic)
+      end
+
+      image = Tempfile.new([digest, ".#{format}"])
       image.close
 
-      if system("pic2plot -Tsvg #{pic} > #{image.path}")
+      if system("pic2plot -T#{format} #{pic} > #{image.path}")
         IO.read image
       else
         raise "Can't generate sequence diagram"

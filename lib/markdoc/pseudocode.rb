@@ -100,7 +100,7 @@ module Markdoc
       end
     end
 
-    def self.draw(code)
+    def self.draw(code, format = :svg)
       parser = PseudocodeParser.new
       tree = parser.parse(code)
 
@@ -118,10 +118,14 @@ module Markdoc
           graphviz = file.path
         end
 
-        image = Tempfile.new([digest, '.svg'])
+        if format == :graphviz
+          return IO.read(graphviz)
+        end
+
+        image = Tempfile.new([digest, ".#{format}"])
         image.close
 
-        if system("dot -n -Tsvg -o#{image.path} #{graphviz}")
+        if system("dot -n -T#{format} -o#{image.path} #{graphviz}")
           IO.read image
         else
           raise "Can't generate flowchart"
