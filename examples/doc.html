@@ -287,25 +287,36 @@ svg {
 
 <h1>Registration page</h1>
 
-<h2>Typical Member Registration Flow (Signup Scenarios)</h2>
+<h2>Typical Member Registration Flow</h2>
 
-<p>WP eMember was designed in a way so you (as the admin) have some customization freedom as to how the membership registration/signup flows on your membership site.</p>
-
-<p>It is a good idea to read this post first and make up you mind on how you want your registration process to flow before you start setting eMember up.</p>
-
-<p>If you are not sure about the difference between a “Join Us” page and a “Registration” page then read this post first.</p>
+<p>Here is how it will work.</p>
 
 <ol>
-<li>Visitors land on your site.</li>
-<li>Want to become a member after seeing some of the awesome content.</li>
-<li>Follows the “Join Us” link.</li>
-<li>The above mentioned link will take them to the “Membership Join Us” Page where you have explained all the different types of membership you offer. It may look similar to the one here.</li>
-<li>From this page they can decide which membership option they want to choose (eg. Free, Silver, Gold or whatever you are offering)</li>
-<li>If they choose the “Free Membership” then they just follow the link and sign up for a free membership. Remember, the free membership sign up is only possible if you (the admin) allow free membership on your site.</li>
-<li>If they choose a “Paid Membership” then they make a payment by clicking on the payment button for the appropriate membership.</li>
-<li>Once the Payment is confirmed (at this point the plugin knows what type of membership this member wants), the plugin will create the appropriate membership account for this visitor.</li>
-<li>The member will receive an email that contains a “unique” link to complete the registration.</li>
-<li>When the member clicks on that link in the email it will let them choose a “username” and “password” and complete the registration. At this point the member can log into the site.</li>
+<li>User visits our registration page</li>
+<li>User enters email address</li>
+<li>If it is new user
+
+<ol>
+<li>Fills in registration form</li>
+<li>Submits the form</li>
+<li>If there is validation error</li>
+<li>Fix the validation error</li>
+<li>Review the fix</li>
+<li>Submit again</li>
+<li>If there is no error</li>
+<li>Submit the form</li>
+</ol></li>
+<li>If it is returning user
+
+<ol>
+<li>Enter password</li>
+<li>If the entered password is wrong</li>
+<li>Ask password again</li>
+<li>If password is correct</li>
+<li>Good to go, proceed next step</li>
+<li>Confirm account info</li>
+</ol></li>
+<li>Confirm registration info</li>
 </ol>
 
 <p class="page-break"><!-- break --></p>
