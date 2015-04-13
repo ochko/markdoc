@@ -1,0 +1,375 @@
+<html>
+  <head>
+<style>/*
+   Some simple Github-like styles, with syntax highlighting CSS via Pygments.
+*/
+html {
+	background:#fff;
+	margin:0;
+	padding:0;
+}
+body {
+	font: 14px helvetica,arial,freesans,clean,sans-serif;
+	line-height: 1.6;
+	margin: 0 auto;
+  padding: 20px;
+	text-align:left;
+	color: #333;
+	width:920px;
+}
+
+.md {
+	background-color: #eee;
+	border-radius:3px;
+  margin: 0;
+	padding:3px;
+}
+
+article {
+  padding: 30px;
+  border: 1px solid #cacaca;
+  background-color: white;
+}
+article > :first-child {
+  margin-top: 0!important;
+}
+
+h1 {
+	font-size:28px;
+	margin-bottom:10px;
+  color: black;
+}
+
+h2 {
+	font-size:24px;
+	margin:20px 0 10px;
+  color: black;
+  border-bottom: 1px solid #ccc;
+}
+
+h3 {
+	font-size:18px;
+	margin:20px 0 10px;
+}
+
+h4 {
+	font-size:16px;
+	font-weight:bold;
+	margin:20px 0 10px;
+}
+
+h5 {
+	font-size:14px;
+	font-weight:bold;
+	margin:20px 0 10px;
+}
+
+h6 {
+	color:#777;
+	font-size:14px;
+	font-weight:bold;
+	margin:20px 0 10px;
+}
+
+hr {
+	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+	border: 0 none;
+	height: 4px;
+	margin: 15px 0;
+	padding: 0;
+}
+
+
+p {
+	margin: 15px 0;
+}
+
+pre, code {
+	font: 12px 'Bitstream Vera Sans Mono','Courier',monospace;
+}
+.highlight pre, pre {
+	background-color:#f8f8f8;
+	border:1px solid #ccc;
+	font-size:13px;
+	line-height:19px;
+	overflow:auto;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	padding:6px 10px;
+}
+
+
+
+code {
+	white-space:nowrap;
+	border:1px solid #eaeaea;
+	background-color:#f8f8f8;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	margin:0 2px;
+	padding:0 5px;
+}
+
+pre>code
+{
+	white-space:pre;
+	border:none;
+	background:transparent;
+	margin:0;
+	padding:0;
+}
+
+a, a code {
+	color: #4183C4;
+	text-decoration:none;
+}
+
+
+blockquote
+{
+	border-left:4px solid #ddd;
+	padding-left:11px;
+	color:#555;
+	margin:14px 0;
+}
+
+table
+{
+  font-size: 14px;
+	border-collapse:collapse;
+	margin:20px 0 0;
+	padding:0;
+}
+
+table tr
+{
+	border-top:1px solid #ccc;
+	background-color:#fff;
+	margin:0;
+	padding:0;
+}
+
+table tr:nth-child(2n)
+{
+	background-color:#f8f8f8;
+}
+table tr th[align="center"], table tr td[align="center"] {
+	text-align:center;
+}
+table tr th, table tr td
+{
+	border:1px solid #ccc;
+	text-align:left;
+	margin:0;
+	padding:6px 13px;
+}
+
+ul, ol
+{
+	margin:15px 0;
+}
+
+ul li, ol li
+{
+	margin-top:7px;
+	margin-bottom:7px;
+}
+
+
+
+.shadow {
+	-webkit-box-shadow:0 5px 15px #000;
+	-moz-box-shadow:0 5px 15px #000;
+	box-shadow:0 5px 15px #000;
+}
+
+
+
+/* Pygments coloring */
+.highlight .c{color:#998;font-style:italic;}
+.highlight .err{color:#a61717;background-color:#e3d2d2;}
+.highlight .k{font-weight:bold;}
+.highlight .o{font-weight:bold;}
+.highlight .cm{color:#998;font-style:italic;}
+.highlight .cp{color:#999;font-weight:bold;}
+.highlight .c1{color:#998;font-style:italic;}
+.highlight .cs{color:#999;font-weight:bold;font-style:italic;}
+.highlight .gd{color:#000;background-color:#fdd;}
+.highlight .gd .x{color:#000;background-color:#faa;}
+.highlight .ge{font-style:italic;}
+.highlight .gr{color:#a00;}
+.highlight .gh{color:#999;}
+.highlight .gi{color:#000;background-color:#dfd;}
+.highlight .gi .x{color:#000;background-color:#afa;}
+.highlight .go{color:#888;}
+.highlight .gp{color:#555;}
+.highlight .gs{font-weight:bold;}
+.highlight .gu{color:#800080;font-weight:bold;}
+.highlight .gt{color:#a00;}
+.highlight .kc{font-weight:bold;}
+.highlight .kd{font-weight:bold;}
+.highlight .kn{font-weight:bold;}
+.highlight .kp{font-weight:bold;}
+.highlight .kr{font-weight:bold;}
+.highlight .kt{color:#458;font-weight:bold;}
+.highlight .m{color:#099;}
+.highlight .s{color:#d14;}
+.highlight .na{color:#008080;}
+.highlight .nb{color:#0086B3;}
+.highlight .nc{color:#458;font-weight:bold;}
+.highlight .no{color:#008080;}
+.highlight .ni{color:#800080;}
+.highlight .ne{color:#900;font-weight:bold;}
+.highlight .nf{color:#900;font-weight:bold;}
+.highlight .nn{color:#555;}
+.highlight .nt{color:#000080;}
+.highlight .nv{color:#008080;}
+.highlight .ow{font-weight:bold;}
+.highlight .w{color:#bbb;}
+.highlight .mf{color:#099;}
+.highlight .mh{color:#099;}
+.highlight .mi{color:#099;}
+.highlight .mo{color:#099;}
+.highlight .sb{color:#d14;}
+.highlight .sc{color:#d14;}
+.highlight .sd{color:#d14;}
+.highlight .s2{color:#d14;}
+.highlight .se{color:#d14;}
+.highlight .sh{color:#d14;}
+.highlight .si{color:#d14;}
+.highlight .sx{color:#d14;}
+.highlight .sr{color:#009926;}
+.highlight .s1{color:#d14;}
+.highlight .ss{color:#990073;}
+.highlight .bp{color:#999;}
+.highlight .vc{color:#008080;}
+.highlight .vg{color:#008080;}
+.highlight .vi{color:#008080;}
+.highlight .il{color:#099;}
+
+</style>
+  </head>
+  <body>
+<div class="md"><article>
+<h1><a name="markdoc" class="anchor" href="#markdoc"><span class="anchor-icon"></span></a>Markdoc</h1>
+
+<p>A markdown to html converter with sequence diagram and flowchart support. Generating documents including diagrams has advantages:</p>
+
+<ul>
+<li>Docs can be checked into version control like source code, and can compare changes effectively as it is all text</li>
+<li>Making and updating diagrams using drawing software is slow</li>
+</ul>
+
+<p>It converts markdown codeblocks for diagrams using <a href="http://www.graphviz.org">Graphviz</a> and <a href="https://www.gnu.org/software/plotutils">plotutils</a>. Pseudocode to Graphviz is inspired by this <a href="https://gist.github.com/antimatter15/1841460">gist</a>. Pseudocode is converted to dot file and then Graphviz&#39;s <code>dot</code> program converts it to vector image. Sequence diagram uses <code>sequence.pic</code> macros from <a href="http://www.umlgraph.org/doc/seq-intro.html">umlgraph</a> to convert sequence diagram code to plotutls&#39; pic format. Plotutils&#39; <code>pic2plot</code> program generates vector image from the pic.</p>
+
+<h2><a name="system-requirements" class="anchor" href="#system-requirements"><span class="anchor-icon"></span></a>System requirements</h2>
+
+<ul>
+<li>Ruby 1.9.2 and up</li>
+<li>Graphviz(tested with dot version 2.38.0)</li>
+<li>Plotutls(tested with pic2plot 2.6)</li>
+</ul>
+
+<h3><a name="os-x" class="anchor" href="#os-x"><span class="anchor-icon"></span></a>OS X</h3>
+
+<p><code>brew install graphviz plotutls</code></p>
+
+<h3><a name="linuxdeb" class="anchor" href="#linuxdeb"><span class="anchor-icon"></span></a>Linux(deb)</h3>
+
+<p><code>apt-get install graphviz plotutls</code></p>
+
+<h2><a name="installing" class="anchor" href="#installing"><span class="anchor-icon"></span></a>Installing</h2>
+
+<p><code>gem install markdoc</code></p>
+
+<p>For bundler add <code>gem markdoc</code> to your Gemfile.</p>
+
+<h2><a name="usage" class="anchor" href="#usage"><span class="anchor-icon"></span></a>Usage</h2>
+
+<p><code>markdoc document.md &gt; document.html</code></p>
+
+<p>Generated html includes inline svg diagrams, eliminating need for attached image files.</p>
+
+<h3><a name="pseudocode-blocks" class="anchor" href="#pseudocode-blocks"><span class="anchor-icon"></span></a>Pseudocode blocks</h3>
+
+<p>Currently it supports only <code>if</code> branch logic, but you can achieve a lot with it. Include codeblock with <code>pseudo</code> language in your markdown.</p>
+
+<pre>
+```pseudo
+visit registration page
+enter email address
+if new user
+  fill in registration form
+  submit
+  if validation error
+    fix registration form
+    review the fix
+    submit
+  else
+    submit
+  end
+else
+  enter password
+  if password wrong
+    ask password again
+  else
+    good to go
+  end
+  confirm account info
+end
+confirm registration info
+```
+</pre>
+
+<p>Or you could compile individual pseudocode to vector image. Below is generated by <code>pseudo2svg examples/example.pseudo &gt; examples/flowchart.svg</code></p>
+
+<p><img src="./examples/flowchart.svg" alt="flowchart"/></p>
+
+<h3><a name="sequence-diagram" class="anchor" href="#sequence-diagram"><span class="anchor-icon"></span></a>Sequence diagram</h3>
+
+<p>Include codeblock with <code>sequence</code> language in your markdown.</p>
+
+<pre>
+```sequence
+Student = Actor
+P = Partner Site
+App = Web App
+Api = Reg API
+
+Student -> P : Choose course(S)
+P -> Api : Issue key for(S)
+P <~ Api : Registration key(K)
+P -> App : Register with key(K)
+Student <~ App : Registration form
+Student -> App : Fill the form(F)
+App : Save the form(F)
+App -> Api : Register(K, F) # New API
+Api : Create course
+App <~ Api : Course details(C)
+App : Save(C)
+Student <~ App : Show course summary
+Student -> Api : Click study button
+Student <~ Api : Show mypage
+```
+</pre>
+
+<p>Or you could compile individual sequence diagram to vector image. Below is generated by <code>sequence2svg examples/example.sequence &gt; examples/sequence.svg</code></p>
+
+<p><img src="./examples/sequence.svg" alt="flowchart"/></p>
+
+<h2><a name="boring-legal-stuff" class="anchor" href="#boring-legal-stuff"><span class="anchor-icon"></span></a>Boring legal stuff</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) Lkhagva Ochirkhuyag, 2015</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</article></div>
+  </body>
+</html>
