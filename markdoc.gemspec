@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.description = "Markdown with support for pseudocode to flowchart and sequence diagram generation"
   s.authors     = ["Lkhagva Ochirkhuyag"]
   s.email       = 'ochkoo@gmail.com'
-  s.executables << 'markdoc'
   s.homepage    = 'https://github.com/ochko/markdoc'
   s.license     = 'MIT'
 
@@ -19,6 +18,10 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'treetop',     '~> 1.6'
   s.add_runtime_dependency 'pygments.rb', '~> 0.6'
 
+  s.executables << 'markdoc'
+  s.executables << 'pseudo2svg'
+  s.executables << 'sequence2svg'
+
   s.require_paths = ['lib']
   s.files         = [
     'lib/markdoc.rb',
@@ -26,6 +29,7 @@ Gem::Specification.new do |s|
 	  'lib/markdoc/pseudocode.treetop',
 	  'lib/markdoc/renderer.rb',
 	  'lib/markdoc/sequence.rb',
+    'lib/markdoc/sequence.pic',
 	  'lib/markdoc/version.rb',
     'css/style.css',
     'css/pygments.css',
