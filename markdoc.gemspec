@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
 	  'lib/markdoc/renderer.rb',
 	  'lib/markdoc/sequence.rb',
 	  'lib/markdoc/version.rb',
+    'css/style.css',
+    'css/pygments.css',
     'bin/markdoc',
     'bin/pseudo2svg',
     'bin/sequence2svg'
