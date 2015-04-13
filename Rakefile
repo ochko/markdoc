@@ -21,4 +21,6 @@ task :usage do
 
   puts 'markdoc examples/doc.md'
   puts `markdoc examples/doc.md`
+
+  `rm -f markdoc-*.gem`
 end
