@@ -11,15 +11,15 @@ It converts markdown codeblocks for diagrams using [Graphviz](http://www.graphvi
 
 - Ruby 1.9.2 and up
 - Graphviz(tested with dot version 2.38.0)
-- Plotutls(tested with pic2plot 2.6)
+- Plotutils(tested with pic2plot 2.6)
 
 ### OS X
 
-`$ brew install graphviz plotutls`
+`$ brew install graphviz plotutils`
 
 ### Linux(deb)
 
-`$ apt-get install graphviz plotutls`
+`$ apt-get install graphviz plotutils`
 
 
 ## Installing
