@@ -25,7 +25,7 @@ module Markdoc
     end
 
     rule word
-      [a-zA-Z0-9 ]+
+      [^\n]+
     end
 
     rule space
