@@ -7,8 +7,8 @@ class PseudocodeTest < Minitest::Test
   def test_conditional
     code = <<-CODE
 if you thursty
-  go to fridge
-  if there is coce
+  go to fridge (хөргөгч рүү очих)
+  if there is coke
     drink it
   else
     buy one
@@ -26,8 +26,8 @@ CODE
     graphviz = <<-GRAPH
 digraph G {
 N1 [shape=diamond label="you thursty"]
-N2 [shape=box label="go to fridge"]
-N3 [shape=diamond label="there is coce"]
+N2 [shape=box label="go to fridge (хөргөгч рүү очих)"]
+N3 [shape=diamond label="there is coke"]
 N4 [shape=box label="drink it"]
   N3 -> N4 [label="Yes"]
 N5 [shape=box label="buy one"]
