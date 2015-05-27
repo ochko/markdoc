@@ -3,7 +3,7 @@ require './lib/markdoc/version'
 Gem::Specification.new do |s|
   s.name        = 'markdoc'
   s.version     = Markdoc::VERSION
-  s.date        = '2015-04-10'
+  s.date        = Date.today.to_s
   s.summary     = "Markdown to HTML converter with diagrams"
   s.description = "Markdown with support for pseudocode to flowchart and sequence diagram generation"
   s.authors     = ["Lkhagva Ochirkhuyag"]
@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'redcarpet',   '~> 3.2'
   s.add_runtime_dependency 'treetop',     '~> 1.6'
   s.add_runtime_dependency 'pygments.rb', '~> 0.6'
+  
+  s.add_development_dependency('rake')
 
   s.executables << 'markdoc'
   s.executables << 'pseudo2svg'
