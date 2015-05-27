@@ -50,7 +50,7 @@ else
   end
   confirm account info
 end
-confirm registration info
+✓ confirm registration info
 ```
 
 <p class="page-break"><!-- break --></p>

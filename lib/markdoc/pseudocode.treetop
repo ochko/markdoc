@@ -21,11 +21,7 @@ module Markdoc
     end
 
     rule sentence
-      ( !keywords word )+ <SentenceLiteral>
-    end
-
-    rule word
-      [^\n]+
+      ( !keywords [^\n]+ )+ <SentenceLiteral>
     end
 
     rule space
