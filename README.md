@@ -10,14 +10,14 @@ It converts markdown codeblocks for diagrams using [Graphviz](http://www.graphvi
 ## System requirements
 
 - Ruby 1.9.2 and up
-- Graphviz(tested with dot version 2.38.0)
-- Plotutils(tested with pic2plot 2.6)
+- Graphviz (tested with dot version 2.38.0)
+- Plotutils (tested with pic2plot 2.6)
 
 ### OS X
 
 `$ brew install graphviz plotutils`
 
-### Linux(deb)
+### Linux (deb)
 
 `$ apt-get install graphviz plotutils`
 
@@ -35,7 +35,7 @@ For bundler add `gem markdoc` to your Gemfile.
 
 Generated html includes inline svg diagrams, eliminating need for attached image files. It provides 3 executables:
 - `markdoc` converts markdown document to html
-- `pseudo2svg` converts pseudocode to svg image((see below for pseudocode format)
+- `pseudo2svg` converts pseudocode to svg image (see below for pseudocode format)
 - `sequence2svg` converts sequence diagram spec to svg image(see below for sequence diagram spec format)
 
 ### Pseudocode blocks
