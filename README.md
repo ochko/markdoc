@@ -5,21 +5,20 @@ A markdown to html converter with sequence diagram and flowchart support. Genera
 - Docs can be checked into version control like source code, and can compare changes effectively as it is all text
 - Making and updating diagrams using drawing software is slow
 
-It converts markdown codeblocks for diagrams using [Graphviz](http://www.graphviz.org) and [plotutils](https://www.gnu.org/software/plotutils). Pseudocode to Graphviz is inspired by this [gist](https://gist.github.com/antimatter15/1841460). Pseudocode is converted to dot file and then Graphviz's `dot` program converts it to vector image. Sequence diagram uses `sequence.pic` macros from [umlgraph](http://www.umlgraph.org/doc/seq-intro.html) to convert sequence diagram code to plotutls' pic format. Plotutils' `pic2plot` program generates vector image from the pic.
+It converts markdown codeblocks for diagrams using [Graphviz](http://www.graphviz.org). Pseudocode to Graphviz is inspired by this [gist](https://gist.github.com/antimatter15/1841460). Pseudocode is converted to dot file and then Graphviz's `dot` program converts it to vector image.
 
 ## System requirements
 
 - Ruby 1.9.2 and up
 - Graphviz (tested with dot version 2.38.0)
-- Plotutils (tested with pic2plot 2.6)
 
 ### OS X
 
-`$ brew install graphviz plotutils`
+`$ brew install graphviz`
 
 ### Linux (deb)
 
-`$ apt-get install graphviz plotutils`
+`$ apt-get install graphviz`
 
 
 ## Installing

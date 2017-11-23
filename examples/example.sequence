@@ -4,13 +4,13 @@ App = Web App
 Api = Reg API
 
 Student -> P : Choose course(S)
-P -> Api : Issue key for(S)
+P -> Api : Issue key for(S) # It creates new key
 P <~ Api : Registration key(K)
 P -> App : Register with key(K)
 Student <~ App : Registration form
 Student -> App : Fill the form(F)
 App : Save the form(F)
-App -> Api : Register(K, F) # New API
+App -> Api : Register(K, F) # New API for the registration process. It takes two parameters - K and F
 Api : Create course
 App <~ Api : Course details(C)
 App : Save(C)

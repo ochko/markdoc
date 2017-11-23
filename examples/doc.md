@@ -26,7 +26,7 @@ Here is how it will work.
 
 <p class="page-break"><!-- break --></p>
 
-## Flows
+## Flow chart
 
 ```pseudo
 visit registration page
@@ -55,7 +55,7 @@ end
 
 <p class="page-break"><!-- break --></p>
 
-## Sequence
+## Sequence diagram
 
 ```sequence
 Student = Actor
@@ -79,7 +79,7 @@ Student -> Api : Click study button
 Student <~ Api : Show mypage
 ```
 
-## Example
+## Code block
 
 ```ruby
 def block_code(code, language)

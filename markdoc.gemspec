@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'redcarpet',   '~> 3.2'
   s.add_runtime_dependency 'treetop',     '~> 1.6'
   s.add_runtime_dependency 'pygments.rb', '~> 0.6'
-  
-  s.add_development_dependency('rake')
+
+  s.add_development_dependency('rake', '> 10.0.0')
 
   s.executables << 'markdoc'
   s.executables << 'pseudo2svg'
@@ -31,7 +31,6 @@ Gem::Specification.new do |s|
 	  'lib/markdoc/pseudocode.treetop',
 	  'lib/markdoc/renderer.rb',
 	  'lib/markdoc/sequence.rb',
-    'lib/markdoc/sequence.pic',
 	  'lib/markdoc/version.rb',
     'css/style.css',
     'css/pygments.css',
