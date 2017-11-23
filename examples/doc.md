@@ -1,27 +1,32 @@
 # Registration page
 
-## Typical Member Registration Flow (Signup Scenarios)
+## Typical Member Registration Flow
 
-WP eMember was designed in a way so you (as the admin) have some customization freedom as to how the membership registration/signup flows on your membership site.
+Here is how it will work.
 
-It is a good idea to read this post first and make up you mind on how you want your registration process to flow before you start setting eMember up.
-
-If you are not sure about the difference between a “Join Us” page and a “Registration” page then read this post first.
-
-1. Visitors land on your site.
-1. Want to become a member after seeing some of the awesome content.
-1. Follows the “Join Us” link.
-1. The above mentioned link will take them to the “Membership Join Us” Page where you have explained all the different types of membership you offer. It may look similar to the one here.
-1. From this page they can decide which membership option they want to choose (eg. Free, Silver, Gold or whatever you are offering)
-1. If they choose the “Free Membership” then they just follow the link and sign up for a free membership. Remember, the free membership sign up is only possible if you (the admin) allow free membership on your site.
-1. If they choose a “Paid Membership” then they make a payment by clicking on the payment button for the appropriate membership.
-1. Once the Payment is confirmed (at this point the plugin knows what type of membership this member wants), the plugin will create the appropriate membership account for this visitor.
-1. The member will receive an email that contains a “unique” link to complete the registration.
-1. When the member clicks on that link in the email it will let them choose a “username” and “password” and complete the registration. At this point the member can log into the site.
+1. User visits our registration page
+1. User enters email address
+1. If it is new user
+  1. Fills in registration form
+  1. Submits the form
+  1. If there is validation error
+    1. Fix the validation error
+    1. Review the fix
+    1. Submit again
+  1. If there is no error
+    1. Submit the form
+1. If it is returning user
+  1. Enter password
+  1. If the entered password is wrong
+    1. Ask password again
+  1. If password is correct
+    1. Good to go, proceed next step
+  1. Confirm account info
+1. Confirm registration info
 
 <p class="page-break"><!-- break --></p>
 
-## Flows
+## Flow chart
 
 ```pseudo
 visit registration page
@@ -45,12 +50,12 @@ else
   end
   confirm account info
 end
-confirm registration info
+✓ confirm registration info
 ```
 
 <p class="page-break"><!-- break --></p>
 
-## Sequence
+## Sequence diagram
 
 ```sequence
 Student = Actor
@@ -74,7 +79,7 @@ Student -> Api : Click study button
 Student <~ Api : Show mypage
 ```
 
-## Example
+## Code block
 
 ```ruby
 def block_code(code, language)

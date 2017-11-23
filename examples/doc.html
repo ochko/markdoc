@@ -287,30 +287,41 @@ svg {
 
 <h1>Registration page</h1>
 
-<h2>Typical Member Registration Flow (Signup Scenarios)</h2>
+<h2>Typical Member Registration Flow</h2>
 
-<p>WP eMember was designed in a way so you (as the admin) have some customization freedom as to how the membership registration/signup flows on your membership site.</p>
-
-<p>It is a good idea to read this post first and make up you mind on how you want your registration process to flow before you start setting eMember up.</p>
-
-<p>If you are not sure about the difference between a “Join Us” page and a “Registration” page then read this post first.</p>
+<p>Here is how it will work.</p>
 
 <ol>
-<li>Visitors land on your site.</li>
-<li>Want to become a member after seeing some of the awesome content.</li>
-<li>Follows the “Join Us” link.</li>
-<li>The above mentioned link will take them to the “Membership Join Us” Page where you have explained all the different types of membership you offer. It may look similar to the one here.</li>
-<li>From this page they can decide which membership option they want to choose (eg. Free, Silver, Gold or whatever you are offering)</li>
-<li>If they choose the “Free Membership” then they just follow the link and sign up for a free membership. Remember, the free membership sign up is only possible if you (the admin) allow free membership on your site.</li>
-<li>If they choose a “Paid Membership” then they make a payment by clicking on the payment button for the appropriate membership.</li>
-<li>Once the Payment is confirmed (at this point the plugin knows what type of membership this member wants), the plugin will create the appropriate membership account for this visitor.</li>
-<li>The member will receive an email that contains a “unique” link to complete the registration.</li>
-<li>When the member clicks on that link in the email it will let them choose a “username” and “password” and complete the registration. At this point the member can log into the site.</li>
+<li>User visits our registration page</li>
+<li>User enters email address</li>
+<li>If it is new user
+
+<ol>
+<li>Fills in registration form</li>
+<li>Submits the form</li>
+<li>If there is validation error</li>
+<li>Fix the validation error</li>
+<li>Review the fix</li>
+<li>Submit again</li>
+<li>If there is no error</li>
+<li>Submit the form</li>
+</ol></li>
+<li>If it is returning user
+
+<ol>
+<li>Enter password</li>
+<li>If the entered password is wrong</li>
+<li>Ask password again</li>
+<li>If password is correct</li>
+<li>Good to go, proceed next step</li>
+<li>Confirm account info</li>
+</ol></li>
+<li>Confirm registration info</li>
 </ol>
 
 <p class="page-break"><!-- break --></p>
 
-<h2>Flows</h2>
+<h2>Flow chart</h2>
 <div class="svg-holder">
 
 
@@ -320,182 +331,216 @@ svg {
  viewBox="0.00 0.00 427.68 775.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 771)">
 <title>G</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-771 423.677,-771 423.677,4 -4,4"/>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-771 423.6773,-771 423.6773,4 -4,4"/>
 
-<g id="node1" class="node"><title>N1</title>
-<polygon fill="none" stroke="black" points="240.536,-767 102.928,-767 102.928,-731 240.536,-731 240.536,-767"/>
-<text text-anchor="middle" x="171.732" y="-744.8" font-family="Times,serif" font-size="14.00">visit registration page</text>
+<g id="node1" class="node">
+<title>N1</title>
+<polygon fill="none" stroke="#000000" points="253.5365,-767 115.9284,-767 115.9284,-731 253.5365,-731 253.5365,-767"/>
+<text text-anchor="middle" x="184.7324" y="-744.8" font-family="Times,serif" font-size="14.00" fill="#000000">visit registration page</text>
 </g>
 
-<g id="node2" class="node"><title>N2</title>
-<polygon fill="none" stroke="black" points="233.795,-694 109.67,-694 109.67,-658 233.795,-658 233.795,-694"/>
-<text text-anchor="middle" x="171.732" y="-671.8" font-family="Times,serif" font-size="14.00">enter email address</text>
+<g id="node2" class="node">
+<title>N2</title>
+<polygon fill="none" stroke="#000000" points="246.795,-694 122.6699,-694 122.6699,-658 246.795,-658 246.795,-694"/>
+<text text-anchor="middle" x="184.7324" y="-671.8" font-family="Times,serif" font-size="14.00" fill="#000000">enter email address</text>
 </g>
 
-<g id="edge1" class="edge"><title>N1&#45;&gt;N2</title>
-<path fill="none" stroke="black" d="M171.732,-730.813C171.732,-722.789 171.732,-713.047 171.732,-704.069"/>
-<polygon fill="black" stroke="black" points="175.233,-704.029 171.732,-694.029 168.233,-704.029 175.233,-704.029"/>
+<g id="edge1" class="edge">
+<title>N1&#45;&gt;N2</title>
+<path fill="none" stroke="#000000" d="M184.7324,-730.9551C184.7324,-722.8828 184.7324,-713.1764 184.7324,-704.1817"/>
+<polygon fill="#000000" stroke="#000000" points="188.2325,-704.0903 184.7324,-694.0904 181.2325,-704.0904 188.2325,-704.0903"/>
 </g>
 
-<g id="node3" class="node"><title>N3</title>
-<polygon fill="none" stroke="black" points="171.732,-621 112.548,-603 171.732,-585 230.917,-603 171.732,-621"/>
-<text text-anchor="middle" x="171.732" y="-598.8" font-family="Times,serif" font-size="14.00">new user</text>
+<g id="node3" class="node">
+<title>N3</title>
+<polygon fill="none" stroke="#000000" points="184.7324,-621 125.5482,-603 184.7324,-585 243.9167,-603 184.7324,-621"/>
+<text text-anchor="middle" x="184.7324" y="-598.8" font-family="Times,serif" font-size="14.00" fill="#000000">new user</text>
 </g>
 
-<g id="edge15" class="edge"><title>N2&#45;&gt;N3</title>
-<path fill="none" stroke="black" d="M171.732,-657.813C171.732,-649.789 171.732,-640.047 171.732,-631.069"/>
-<polygon fill="black" stroke="black" points="175.233,-631.029 171.732,-621.029 168.233,-631.029 175.233,-631.029"/>
+<g id="edge15" class="edge">
+<title>N2&#45;&gt;N3</title>
+<path fill="none" stroke="#000000" d="M184.7324,-657.9551C184.7324,-649.8828 184.7324,-640.1764 184.7324,-631.1817"/>
+<polygon fill="#000000" stroke="#000000" points="188.2325,-631.0903 184.7324,-621.0904 181.2325,-631.0904 188.2325,-631.0903"/>
 </g>
 
-<g id="node4" class="node"><title>N4</title>
-<polygon fill="none" stroke="black" points="174.66,-535 30.8047,-535 30.8047,-499 174.66,-499 174.66,-535"/>
-<text text-anchor="middle" x="102.732" y="-512.8" font-family="Times,serif" font-size="14.00">fill in registration form</text>
+<g id="node4" class="node">
+<title>N4</title>
+<polygon fill="none" stroke="#000000" points="187.6602,-535 43.8047,-535 43.8047,-499 187.6602,-499 187.6602,-535"/>
+<text text-anchor="middle" x="115.7324" y="-512.8" font-family="Times,serif" font-size="14.00" fill="#000000">fill in registration form</text>
 </g>
 
-<g id="edge8" class="edge"><title>N3&#45;&gt;N4</title>
-<path fill="none" stroke="black" d="M160.338,-588.129C150.262,-575.862 135.319,-557.67 123.177,-542.889"/>
-<polygon fill="black" stroke="black" points="125.82,-540.593 116.768,-535.087 120.411,-545.036 125.82,-540.593"/>
-<text text-anchor="middle" x="151.921" y="-555.8" font-family="Times,serif" font-size="14.00">Yes</text>
+<g id="edge8" class="edge">
+<title>N3&#45;&gt;N4</title>
+<path fill="none" stroke="#000000" d="M173.0275,-588.4113C163.1004,-576.0384 148.6156,-557.9849 136.6942,-543.1262"/>
+<polygon fill="#000000" stroke="#000000" points="139.3681,-540.866 130.3801,-535.2565 133.9082,-545.2466 139.3681,-540.866"/>
+<text text-anchor="middle" x="164.9214" y="-555.8" font-family="Times,serif" font-size="14.00" fill="#000000">Yes</text>
 </g>
 
-<g id="node11" class="node"><title>N11</title>
-<polygon fill="none" stroke="black" points="309.095,-535 208.369,-535 208.369,-499 309.095,-499 309.095,-535"/>
-<text text-anchor="middle" x="258.732" y="-512.8" font-family="Times,serif" font-size="14.00">enter password</text>
+<g id="node11" class="node">
+<title>N11</title>
+<polygon fill="none" stroke="#000000" points="306.0954,-535 205.3695,-535 205.3695,-499 306.0954,-499 306.0954,-535"/>
+<text text-anchor="middle" x="255.7324" y="-512.8" font-family="Times,serif" font-size="14.00" fill="#000000">enter password</text>
 </g>
 
-<g id="edge14" class="edge"><title>N3&#45;&gt;N11</title>
-<path fill="none" stroke="black" d="M185.326,-588.875C198.222,-576.424 217.915,-557.41 233.658,-542.21"/>
-<polygon fill="black" stroke="black" points="236.259,-544.564 241.022,-535.1 231.397,-539.528 236.259,-544.564"/>
-<text text-anchor="middle" x="229.288" y="-555.8" font-family="Times,serif" font-size="14.00">No</text>
+<g id="edge14" class="edge">
+<title>N3&#45;&gt;N11</title>
+<path fill="none" stroke="#000000" d="M196.7766,-588.4113C206.9915,-576.0384 221.8961,-557.9849 234.1631,-543.1262"/>
+<polygon fill="#000000" stroke="#000000" points="236.9927,-545.1963 240.6602,-535.2565 231.5947,-540.7397 236.9927,-545.1963"/>
+<text text-anchor="middle" x="232.2876" y="-555.8" font-family="Times,serif" font-size="14.00" fill="#000000">No</text>
 </g>
 
-<g id="node5" class="node"><title>N5</title>
-<polygon fill="none" stroke="black" points="119.85,-462 65.6151,-462 65.6151,-426 119.85,-426 119.85,-462"/>
-<text text-anchor="middle" x="92.7324" y="-439.8" font-family="Times,serif" font-size="14.00">submit</text>
+<g id="node5" class="node">
+<title>N5</title>
+<polygon fill="none" stroke="#000000" points="141.8498,-462 87.6151,-462 87.6151,-426 141.8498,-426 141.8498,-462"/>
+<text text-anchor="middle" x="114.7324" y="-439.8" font-family="Times,serif" font-size="14.00" fill="#000000">submit</text>
 </g>
 
-<g id="edge2" class="edge"><title>N4&#45;&gt;N5</title>
-<path fill="none" stroke="black" d="M100.312,-498.813C99.1817,-490.789 97.8096,-481.047 96.545,-472.069"/>
-<polygon fill="black" stroke="black" points="99.9914,-471.443 95.1309,-462.029 93.0598,-472.419 99.9914,-471.443"/>
+<g id="edge2" class="edge">
+<title>N4&#45;&gt;N5</title>
+<path fill="none" stroke="#000000" d="M115.4852,-498.9551C115.3747,-490.8828 115.2417,-481.1764 115.1185,-472.1817"/>
+<polygon fill="#000000" stroke="#000000" points="118.617,-472.0414 114.9803,-462.0904 111.6177,-472.1374 118.617,-472.0414"/>
 </g>
 
-<g id="node6" class="node"><title>N6</title>
-<polygon fill="none" stroke="black" points="91.7324,-376 -0.233029,-358 91.7324,-340 183.698,-358 91.7324,-376"/>
-<text text-anchor="middle" x="91.7324" y="-353.8" font-family="Times,serif" font-size="14.00">validation error</text>
+<g id="node6" class="node">
+<title>N6</title>
+<polygon fill="none" stroke="#000000" points="91.7324,-376 -.233,-358 91.7324,-340 183.6979,-358 91.7324,-376"/>
+<text text-anchor="middle" x="91.7324" y="-353.8" font-family="Times,serif" font-size="14.00" fill="#000000">validation error</text>
 </g>
 
-<g id="edge7" class="edge"><title>N5&#45;&gt;N6</title>
-<path fill="none" stroke="black" d="M92.5252,-425.595C92.3903,-414.257 92.2113,-399.227 92.0576,-386.315"/>
-<polygon fill="black" stroke="black" points="95.5548,-386.053 91.936,-376.095 88.5553,-386.136 95.5548,-386.053"/>
+<g id="edge7" class="edge">
+<title>N5&#45;&gt;N6</title>
+<path fill="none" stroke="#000000" d="M109.8547,-425.7616C106.7124,-414.0122 102.5695,-398.5213 99.0381,-385.3167"/>
+<polygon fill="#000000" stroke="#000000" points="102.3327,-384.0884 96.3678,-375.3322 95.5703,-385.897 102.3327,-384.0884"/>
 </g>
 
-<g id="node7" class="node"><title>N7</title>
-<polygon fill="none" stroke="black" points="146.991,-290 18.4734,-290 18.4734,-254 146.991,-254 146.991,-290"/>
-<text text-anchor="middle" x="82.7324" y="-267.8" font-family="Times,serif" font-size="14.00">fix registration form</text>
+<g id="node7" class="node">
+<title>N7</title>
+<polygon fill="none" stroke="#000000" points="145.9915,-290 17.4734,-290 17.4734,-254 145.9915,-254 145.9915,-290"/>
+<text text-anchor="middle" x="81.7324" y="-267.8" font-family="Times,serif" font-size="14.00" fill="#000000">fix registration form</text>
 </g>
 
-<g id="edge5" class="edge"><title>N6&#45;&gt;N7</title>
-<path fill="none" stroke="black" d="M89.9112,-340.001C88.6993,-328.691 87.0799,-313.576 85.6859,-300.566"/>
-<polygon fill="black" stroke="black" points="89.1274,-299.832 84.5819,-290.262 82.1672,-300.578 89.1274,-299.832"/>
-<text text-anchor="middle" x="98.9214" y="-310.8" font-family="Times,serif" font-size="14.00">Yes</text>
+<g id="edge5" class="edge">
+<title>N6&#45;&gt;N7</title>
+<path fill="none" stroke="#000000" d="M89.6604,-340.1807C88.3152,-328.612 86.5335,-313.2888 84.9998,-300.0997"/>
+<polygon fill="#000000" stroke="#000000" points="88.4679,-299.6211 83.8362,-290.0923 81.5147,-300.4297 88.4679,-299.6211"/>
+<text text-anchor="middle" x="97.9214" y="-310.8" font-family="Times,serif" font-size="14.00" fill="#000000">Yes</text>
 </g>
 
-<g id="node10" class="node"><title>N10</title>
-<polygon fill="none" stroke="black" points="201.85,-236 147.615,-236 147.615,-200 201.85,-200 201.85,-236"/>
-<text text-anchor="middle" x="174.732" y="-213.8" font-family="Times,serif" font-size="14.00">submit</text>
+<g id="node10" class="node">
+<title>N10</title>
+<polygon fill="none" stroke="#000000" points="200.8498,-236 146.6151,-236 146.6151,-200 200.8498,-200 200.8498,-236"/>
+<text text-anchor="middle" x="173.7324" y="-213.8" font-family="Times,serif" font-size="14.00" fill="#000000">submit</text>
 </g>
 
-<g id="edge6" class="edge"><title>N6&#45;&gt;N10</title>
-<path fill="none" stroke="black" d="M109.195,-343.119C123.704,-330.681 143.833,-311.175 155.732,-290 163.304,-276.526 167.965,-259.908 170.773,-246.137"/>
-<polygon fill="black" stroke="black" points="174.223,-246.727 172.578,-236.261 167.337,-245.469 174.223,-246.727"/>
-<text text-anchor="middle" x="151.288" y="-310.8" font-family="Times,serif" font-size="14.00">No</text>
+<g id="edge6" class="edge">
+<title>N6&#45;&gt;N10</title>
+<path fill="none" stroke="#000000" d="M109.4959,-343.3052C123.7342,-330.6017 143.1809,-311.0135 154.7324,-290 162.1766,-276.4583 166.8113,-259.8654 169.6373,-246.0229"/>
+<polygon fill="#000000" stroke="#000000" points="173.1013,-246.537 171.4624,-236.0697 166.2161,-245.2744 173.1013,-246.537"/>
+<text text-anchor="middle" x="152.2876" y="-310.8" font-family="Times,serif" font-size="14.00" fill="#000000">No</text>
 </g>
 
-<g id="node8" class="node"><title>N8</title>
-<polygon fill="none" stroke="black" points="143.212,-182 50.2529,-182 50.2529,-146 143.212,-146 143.212,-182"/>
-<text text-anchor="middle" x="96.7324" y="-159.8" font-family="Times,serif" font-size="14.00">review the fix</text>
+<g id="node8" class="node">
+<title>N8</title>
+<polygon fill="none" stroke="#000000" points="142.2119,-182 49.2529,-182 49.2529,-146 142.2119,-146 142.2119,-182"/>
+<text text-anchor="middle" x="95.7324" y="-159.8" font-family="Times,serif" font-size="14.00" fill="#000000">review the fix</text>
 </g>
 
-<g id="edge3" class="edge"><title>N7&#45;&gt;N8</title>
-<path fill="none" stroke="black" d="M84.9818,-253.969C87.1731,-237.378 90.5404,-211.883 93.1095,-192.431"/>
-<polygon fill="black" stroke="black" points="96.6026,-192.713 94.4422,-182.341 89.6628,-191.796 96.6026,-192.713"/>
+<g id="edge3" class="edge">
+<title>N7&#45;&gt;N8</title>
+<path fill="none" stroke="#000000" d="M84.1073,-253.6793C86.2927,-236.821 89.5666,-211.5651 92.0838,-192.147"/>
+<polygon fill="#000000" stroke="#000000" points="95.5779,-192.4172 93.3926,-182.0502 88.636,-191.5172 95.5779,-192.4172"/>
 </g>
 
-<g id="node9" class="node"><title>N9</title>
-<polygon fill="none" stroke="black" points="140.85,-109 86.6151,-109 86.6151,-73 140.85,-73 140.85,-109"/>
-<text text-anchor="middle" x="113.732" y="-86.8" font-family="Times,serif" font-size="14.00">submit</text>
+<g id="node9" class="node">
+<title>N9</title>
+<polygon fill="none" stroke="#000000" points="138.8498,-109 84.6151,-109 84.6151,-73 138.8498,-73 138.8498,-109"/>
+<text text-anchor="middle" x="111.7324" y="-86.8" font-family="Times,serif" font-size="14.00" fill="#000000">submit</text>
 </g>
 
-<g id="edge4" class="edge"><title>N8&#45;&gt;N9</title>
-<path fill="none" stroke="black" d="M100.848,-145.813C102.79,-137.702 105.152,-127.836 107.321,-118.777"/>
-<polygon fill="black" stroke="black" points="110.73,-119.569 109.655,-109.029 103.923,-117.939 110.73,-119.569"/>
+<g id="edge4" class="edge">
+<title>N8&#45;&gt;N9</title>
+<path fill="none" stroke="#000000" d="M99.6875,-145.9551C101.476,-137.7951 103.6305,-127.9652 105.6198,-118.8887"/>
+<polygon fill="#000000" stroke="#000000" points="109.0452,-119.6079 107.7674,-109.0904 102.2075,-118.1091 109.0452,-119.6079"/>
 </g>
 
-<g id="node16" class="node"><title>N16</title>
-<polygon fill="none" stroke="black" points="251.095,-36 98.3701,-36 98.3701,-0 251.095,-0 251.095,-36"/>
-<text text-anchor="middle" x="174.732" y="-13.8" font-family="Times,serif" font-size="14.00">confirm registration info</text>
+<g id="node16" class="node">
+<title>N16</title>
+<polygon fill="none" stroke="#000000" points="257.293,-36 90.1719,-36 90.1719,0 257.293,0 257.293,-36"/>
+<text text-anchor="middle" x="173.7324" y="-15.3176" font-family="Times,serif" font-size="14.00" fill="#000000">✓ confirm registration info</text>
 </g>
 
-<g id="edge16" class="edge"><title>N9&#45;&gt;N16</title>
-<path fill="none" stroke="black" d="M128.499,-72.8129C135.992,-64.0918 145.229,-53.3402 153.472,-43.7459"/>
-<polygon fill="black" stroke="black" points="156.24,-45.8947 160.102,-36.0288 150.931,-41.333 156.24,-45.8947"/>
+<g id="edge16" class="edge">
+<title>N9&#45;&gt;N16</title>
+<path fill="none" stroke="#000000" d="M127.0583,-72.9551C134.5103,-64.1809 143.6022,-53.4759 151.7751,-43.853"/>
+<polygon fill="#000000" stroke="#000000" points="154.5622,-45.9781 158.368,-36.0904 149.2268,-41.4466 154.5622,-45.9781"/>
 </g>
 
-<g id="edge17" class="edge"><title>N10&#45;&gt;N16</title>
-<path fill="none" stroke="black" d="M174.732,-199.775C174.732,-165.314 174.732,-87.6454 174.732,-46.2236"/>
-<polygon fill="black" stroke="black" points="178.233,-46.044 174.732,-36.044 171.233,-46.0441 178.233,-46.044"/>
+<g id="edge17" class="edge">
+<title>N10&#45;&gt;N16</title>
+<path fill="none" stroke="#000000" d="M173.7324,-199.8986C173.7324,-164.9585 173.7324,-87.9938 173.7324,-46.2533"/>
+<polygon fill="#000000" stroke="#000000" points="177.2325,-46.2046 173.7324,-36.2046 170.2325,-46.2046 177.2325,-46.2046"/>
 </g>
 
-<g id="node12" class="node"><title>N12</title>
-<polygon fill="none" stroke="black" points="263.732,-462 166.997,-444 263.732,-426 360.468,-444 263.732,-462"/>
-<text text-anchor="middle" x="263.732" y="-439.8" font-family="Times,serif" font-size="14.00">password wrong</text>
+<g id="node12" class="node">
+<title>N12</title>
+<polygon fill="none" stroke="#000000" points="263.7324,-462 166.9967,-444 263.7324,-426 360.4682,-444 263.7324,-462"/>
+<text text-anchor="middle" x="263.7324" y="-439.8" font-family="Times,serif" font-size="14.00" fill="#000000">password wrong</text>
 </g>
 
-<g id="edge11" class="edge"><title>N11&#45;&gt;N12</title>
-<path fill="none" stroke="black" d="M259.943,-498.813C260.508,-490.789 261.194,-481.047 261.826,-472.069"/>
-<polygon fill="black" stroke="black" points="265.322,-472.25 262.533,-462.029 258.339,-471.758 265.322,-472.25"/>
+<g id="edge11" class="edge">
+<title>N11&#45;&gt;N12</title>
+<path fill="none" stroke="#000000" d="M257.71,-498.9551C258.6012,-490.8221 259.6743,-481.0303 260.6662,-471.979"/>
+<polygon fill="#000000" stroke="#000000" points="264.1674,-472.1592 261.7777,-461.8374 257.209,-471.3966 264.1674,-472.1592"/>
 </g>
 
-<g id="node13" class="node"><title>N13</title>
-<polygon fill="none" stroke="black" points="326.095,-376 201.37,-376 201.37,-340 326.095,-340 326.095,-376"/>
-<text text-anchor="middle" x="263.732" y="-353.8" font-family="Times,serif" font-size="14.00">ask password again</text>
+<g id="node13" class="node">
+<title>N13</title>
+<polygon fill="none" stroke="#000000" points="326.0948,-376 201.3701,-376 201.3701,-340 326.0948,-340 326.0948,-376"/>
+<text text-anchor="middle" x="263.7324" y="-353.8" font-family="Times,serif" font-size="14.00" fill="#000000">ask password again</text>
 </g>
 
-<g id="edge9" class="edge"><title>N12&#45;&gt;N13</title>
-<path fill="none" stroke="black" d="M263.732,-425.595C263.732,-414.257 263.732,-399.227 263.732,-386.315"/>
-<polygon fill="black" stroke="black" points="267.233,-386.095 263.732,-376.095 260.233,-386.095 267.233,-386.095"/>
-<text text-anchor="middle" x="273.921" y="-396.8" font-family="Times,serif" font-size="14.00">Yes</text>
+<g id="edge9" class="edge">
+<title>N12&#45;&gt;N13</title>
+<path fill="none" stroke="#000000" d="M263.7324,-425.7616C263.7324,-414.3597 263.7324,-399.4342 263.7324,-386.494"/>
+<polygon fill="#000000" stroke="#000000" points="267.2325,-386.2121 263.7324,-376.2121 260.2325,-386.2121 267.2325,-386.2121"/>
+<text text-anchor="middle" x="273.9214" y="-396.8" font-family="Times,serif" font-size="14.00" fill="#000000">Yes</text>
 </g>
 
-<g id="node14" class="node"><title>N14</title>
-<polygon fill="none" stroke="black" points="419.622,-376 343.843,-376 343.843,-340 419.622,-340 419.622,-376"/>
-<text text-anchor="middle" x="381.732" y="-353.8" font-family="Times,serif" font-size="14.00">good to go</text>
+<g id="node14" class="node">
+<title>N14</title>
+<polygon fill="none" stroke="#000000" points="419.6222,-376 343.8427,-376 343.8427,-340 419.6222,-340 419.6222,-376"/>
+<text text-anchor="middle" x="381.7324" y="-353.8" font-family="Times,serif" font-size="14.00" fill="#000000">good to go</text>
 </g>
 
-<g id="edge10" class="edge"><title>N12&#45;&gt;N14</title>
-<path fill="none" stroke="black" d="M282.691,-429.504C300.635,-416.73 327.936,-397.296 349.333,-382.064"/>
-<polygon fill="black" stroke="black" points="351.389,-384.896 357.506,-376.246 347.33,-379.194 351.389,-384.896"/>
-<text text-anchor="middle" x="338.288" y="-396.8" font-family="Times,serif" font-size="14.00">No</text>
+<g id="edge10" class="edge">
+<title>N12&#45;&gt;N14</title>
+<path fill="none" stroke="#000000" d="M283.483,-429.6055C301.2435,-416.6614 327.6883,-397.3881 348.6694,-382.0968"/>
+<polygon fill="#000000" stroke="#000000" points="350.9735,-384.7485 356.9935,-376.0301 346.8506,-379.0914 350.9735,-384.7485"/>
+<text text-anchor="middle" x="338.2876" y="-396.8" font-family="Times,serif" font-size="14.00" fill="#000000">No</text>
 </g>
 
-<g id="node15" class="node"><title>N15</title>
-<polygon fill="none" stroke="black" points="334.868,-290 202.597,-290 202.597,-254 334.868,-254 334.868,-290"/>
-<text text-anchor="middle" x="268.732" y="-267.8" font-family="Times,serif" font-size="14.00">confirm account info</text>
+<g id="node15" class="node">
+<title>N15</title>
+<polygon fill="none" stroke="#000000" points="333.8677,-290 201.5972,-290 201.5972,-254 333.8677,-254 333.8677,-290"/>
+<text text-anchor="middle" x="267.7324" y="-267.8" font-family="Times,serif" font-size="14.00" fill="#000000">confirm account info</text>
 </g>
 
-<g id="edge12" class="edge"><title>N13&#45;&gt;N15</title>
-<path fill="none" stroke="black" d="M264.768,-339.595C265.443,-328.257 266.338,-313.227 267.107,-300.315"/>
-<polygon fill="black" stroke="black" points="270.614,-300.285 267.715,-290.095 263.627,-299.869 270.614,-300.285"/>
+<g id="edge12" class="edge">
+<title>N13&#45;&gt;N15</title>
+<path fill="none" stroke="#000000" d="M264.5807,-339.7616C265.1111,-328.3597 265.8053,-313.4342 266.4071,-300.494"/>
+<polygon fill="#000000" stroke="#000000" points="269.9169,-300.3639 266.8854,-290.2121 262.9244,-300.0387 269.9169,-300.3639"/>
 </g>
 
-<g id="edge13" class="edge"><title>N14&#45;&gt;N15</title>
-<path fill="none" stroke="black" d="M358.593,-339.799C341.682,-327.228 318.561,-310.04 300.006,-296.248"/>
-<polygon fill="black" stroke="black" points="301.955,-293.335 291.841,-290.178 297.779,-298.953 301.955,-293.335"/>
+<g id="edge13" class="edge">
+<title>N14&#45;&gt;N15</title>
+<path fill="none" stroke="#000000" d="M357.8343,-339.9716C340.962,-327.2433 318.1679,-310.0478 299.7281,-296.1371"/>
+<polygon fill="#000000" stroke="#000000" points="301.6901,-293.233 291.5991,-290.0047 297.4744,-298.8212 301.6901,-293.233"/>
 </g>
 
-<g id="edge18" class="edge"><title>N15&#45;&gt;N16</title>
-<path fill="none" stroke="black" d="M262.565,-253.781C249.347,-216.987 217.176,-128.024 188.732,-54 187.676,-51.2509 186.559,-48.3869 185.434,-45.5332"/>
-<polygon fill="black" stroke="black" points="188.611,-44.0507 181.662,-36.0532 182.107,-46.6386 188.611,-44.0507"/>
+<g id="edge18" class="edge">
+<title>N15&#45;&gt;N16</title>
+<path fill="none" stroke="#000000" d="M261.2119,-253.869C247.7202,-216.4358 215.6647,-127.9161 187.7324,-54 186.7102,-51.2948 185.635,-48.4794 184.5538,-45.6677"/>
+<polygon fill="#000000" stroke="#000000" points="187.7969,-44.35 180.9226,-36.288 181.269,-46.8772 187.7969,-44.35"/>
 </g>
 </g>
 </svg>
@@ -503,145 +548,68 @@ svg {
 </div>
 <p class="page-break"><!-- break --></p>
 
-<h2>Sequence</h2>
+<h2>Sequence diagram</h2>
 <div class="svg-holder">
-
-
-<svg version="1.1" baseProfile="full" id="body" width="8in" height="8in" viewBox="0 0 1 1" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
-<title>SVG drawing</title>
-<desc>This was produced by version 4.4 of GNU libplot, a free library for exporting 2-D vector graphics.</desc>
-<rect id="background" x="0" y="0" width="1" height="1" stroke="none" fill="white"/>
-<g id="content" transform="translate(0.05,0.21875) scale(1,-1) scale(0.125) " xml:space="preserve" stroke="black" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10.433" stroke-dasharray="none" stroke-dashoffset="0" stroke-opacity="1" fill="none" fill-rule="evenodd" fill-opacity="1" font-style="normal" font-variant="normal" font-weight="normal" font-stretch="normal" font-size-adjust="none" letter-spacing="normal" word-spacing="normal" text-anchor="start">
-<circle cx="0.15" cy="0.19" r="0.06" stroke-width="0.0094118" />
-<line x1="0.15" y1="0.13" x2="0.15" y2="0.01" stroke-width="0.0094118" />
-<line x1="0" y1="0.11" x2="0.3" y2="0.11" stroke-width="0.0094118" />
-<line x1="0.15" y1="0.01" x2="0.07" y2="-0.14" stroke-width="0.0094118" />
-<line x1="0.15" y1="0.01" x2="0.23" y2="-0.14" stroke-width="0.0094118" />
-<text transform="translate(-0.089375,-0.29903) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Student</text>
-<rect x="1.05" y="-0.25" width="1.3" height="0.5" stroke-width="0.0094118" />
-<text transform="translate(1.3333,-0.049028) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Partner Site</text>
-<rect x="3.1" y="-0.25" width="1.3" height="0.5" stroke-width="0.0094118" />
-<text transform="translate(3.4644,-0.049028) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Web App</text>
-<rect x="5.15" y="-0.25" width="1.3" height="0.5" stroke-width="0.0094118" />
-<text transform="translate(5.5414,-0.049028) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Reg API</text>
-<line x1="0.15" y1="-0.3" x2="0.15" y2="-0.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="0.1" y1="-0.25" x2="0.2" y2="-0.25" stroke-width="0.0094118" />
-<line x1="0.21" y1="-0.5" x2="1.64" y2="-0.5" stroke-width="0.0094118" />
-<polygon points="1.54,-0.475 1.64,-0.5 1.54,-0.525 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(0.36542,-0.46569) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Choose course(S)</text>
-<text transform="translate(0.90569,-0.63236) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="1.7" y1="-0.25" x2="1.7" y2="-0.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="1.65" y1="-0.5" x2="1.75" y2="-0.5" stroke-width="0.0094118" />
-<line x1="0.1" y1="-0.25" x2="0.1" y2="-0.5" stroke-width="0.0094118" />
-<line x1="0.2" y1="-0.25" x2="0.2" y2="-0.5" stroke-width="0.0094118" />
-<line x1="0.1" y1="-0.5" x2="0.2" y2="-0.5" stroke-width="0.0094118" />
-<line x1="1.76" y1="-0.75" x2="5.74" y2="-0.75" stroke-width="0.0094118" />
-<polygon points="5.64,-0.725 5.74,-0.75 5.64,-0.775 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(3.2638,-0.71569) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Issue key for(S)</text>
-<text transform="translate(3.7307,-0.88236) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="5.8" y1="-0.25" x2="5.8" y2="-0.75" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="5.75" y1="-0.75" x2="5.85" y2="-0.75" stroke-width="0.0094118" />
-<line x1="5.74" y1="-1" x2="1.76" y2="-1" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<polygon points="1.86,-1.025 1.76,-1 1.86,-0.975 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(3.1596,-0.96569) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Registration key(K)</text>
-<text transform="translate(3.7307,-1.1324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="5.75" y1="-0.75" x2="5.75" y2="-1" stroke-width="0.0094118" />
-<line x1="5.85" y1="-0.75" x2="5.85" y2="-1" stroke-width="0.0094118" />
-<line x1="5.75" y1="-1" x2="5.85" y2="-1" stroke-width="0.0094118" />
-<line x1="1.76" y1="-1.25" x2="3.69" y2="-1.25" stroke-width="0.0094118" />
-<polygon points="3.59,-1.225 3.69,-1.25 3.59,-1.275 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(2.1038,-1.2157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Register with key(K)</text>
-<text transform="translate(2.7057,-1.3824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="3.75" y1="-0.25" x2="3.75" y2="-1.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="3.7" y1="-1.25" x2="3.8" y2="-1.25" stroke-width="0.0094118" />
-<line x1="1.65" y1="-0.5" x2="1.65" y2="-1.25" stroke-width="0.0094118" />
-<line x1="1.75" y1="-0.5" x2="1.75" y2="-1.25" stroke-width="0.0094118" />
-<line x1="1.65" y1="-1.25" x2="1.75" y2="-1.25" stroke-width="0.0094118" />
-<line x1="3.69" y1="-1.5" x2="0.21" y2="-1.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<polygon points="0.31,-1.525 0.21,-1.5 0.31,-1.475 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(1.4213,-1.4657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Registration form</text>
-<text transform="translate(1.9307,-1.6324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="0.15" y1="-0.5" x2="0.15" y2="-1.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="0.1" y1="-1.5" x2="0.2" y2="-1.5" stroke-width="0.0094118" />
-<line x1="0.21" y1="-1.75" x2="3.69" y2="-1.75" stroke-width="0.0094118" />
-<polygon points="3.59,-1.725 3.69,-1.75 3.59,-1.775 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(1.4986,-1.7157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Fill the form(F)</text>
-<text transform="translate(1.9307,-1.8824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="0.1" y1="-1.5" x2="0.1" y2="-1.75" stroke-width="0.0094118" />
-<line x1="0.2" y1="-1.5" x2="0.2" y2="-1.75" stroke-width="0.0094118" />
-<line x1="0.1" y1="-1.75" x2="0.2" y2="-1.75" stroke-width="0.0094118" />
-<polyline points="3.81,-2 4.31,-2 4.31,-2.25 3.81,-2.25 " stroke-width="0.0094118" />
-<polygon points="3.91,-2.275 3.81,-2.25 3.91,-2.225 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(3.81,-1.924) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Save the form(F)</text>
-<text transform="translate(3.7907,-2.0907) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<text transform="translate(3.7907,-2.2574) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<text transform="translate(3.7907,-2.424) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="3.81" y1="-2.5" x2="5.74" y2="-2.5" stroke-width="0.0094118" />
-<polygon points="5.64,-2.475 5.74,-2.5 5.64,-2.525 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(4.3428,-2.4657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Register(K, F)</text>
-<text transform="translate(4.7557,-2.6324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="5.8" y1="-2.5" x2="6.3" y2="-2.3" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<text transform="translate(6.4799,-2.349) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >New API</text>
-<polygon points="6.3,-2.15 7.1,-2.15 7.2,-2.25 7.2,-2.45 6.3,-2.45 " stroke-width="0.0094118" />
-<polyline points="7.1,-2.15 7.1,-2.25 7.2,-2.25 " stroke-width="0.0094118" />
-<line x1="5.8" y1="-1" x2="5.8" y2="-2.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="5.75" y1="-2.5" x2="5.85" y2="-2.5" stroke-width="0.0094118" />
-<line x1="3.7" y1="-1.25" x2="3.7" y2="-2.5" stroke-width="0.0094118" />
-<line x1="3.8" y1="-1.25" x2="3.8" y2="-2.5" stroke-width="0.0094118" />
-<line x1="3.7" y1="-2.5" x2="3.8" y2="-2.5" stroke-width="0.0094118" />
-<polyline points="5.86,-2.75 6.36,-2.75 6.36,-3 5.86,-3 " stroke-width="0.0094118" />
-<polygon points="5.96,-3.025 5.86,-3 5.96,-2.975 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(5.86,-2.674) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Create course</text>
-<text transform="translate(5.8407,-2.8407) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<text transform="translate(5.8407,-3.0074) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<text transform="translate(5.8407,-3.174) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="5.74" y1="-3.25" x2="3.81" y2="-3.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<polygon points="3.91,-3.275 3.81,-3.25 3.91,-3.225 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(4.2348,-3.2157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Course details(C)</text>
-<text transform="translate(4.7557,-3.3824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="3.75" y1="-2.5" x2="3.75" y2="-3.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="3.7" y1="-3.25" x2="3.8" y2="-3.25" stroke-width="0.0094118" />
-<line x1="5.75" y1="-2.5" x2="5.75" y2="-3.25" stroke-width="0.0094118" />
-<line x1="5.85" y1="-2.5" x2="5.85" y2="-3.25" stroke-width="0.0094118" />
-<line x1="5.75" y1="-3.25" x2="5.85" y2="-3.25" stroke-width="0.0094118" />
-<polyline points="3.81,-3.5 4.31,-3.5 4.31,-3.75 3.81,-3.75 " stroke-width="0.0094118" />
-<polygon points="3.91,-3.775 3.81,-3.75 3.91,-3.725 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(3.81,-3.424) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Save(C)</text>
-<text transform="translate(3.7907,-3.5907) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<text transform="translate(3.7907,-3.7574) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<text transform="translate(3.7907,-3.924) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="3.69" y1="-4" x2="0.21" y2="-4" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<polygon points="0.31,-4.025 0.21,-4 0.31,-3.975 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(1.2438,-3.9657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Show course summary</text>
-<text transform="translate(1.9307,-4.1324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="0.15" y1="-1.75" x2="0.15" y2="-4" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="0.1" y1="-4" x2="0.2" y2="-4" stroke-width="0.0094118" />
-<line x1="3.7" y1="-3.25" x2="3.7" y2="-4" stroke-width="0.0094118" />
-<line x1="3.8" y1="-3.25" x2="3.8" y2="-4" stroke-width="0.0094118" />
-<line x1="3.7" y1="-4" x2="3.8" y2="-4" stroke-width="0.0094118" />
-<line x1="0.21" y1="-4.25" x2="5.74" y2="-4.25" stroke-width="0.0094118" />
-<polygon points="5.64,-4.225 5.74,-4.25 5.64,-4.275 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(2.4269,-4.2157) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Click study button</text>
-<text transform="translate(2.9557,-4.3824) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="5.8" y1="-3.25" x2="5.8" y2="-4.25" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="5.75" y1="-4.25" x2="5.85" y2="-4.25" stroke-width="0.0094118" />
-<line x1="5.74" y1="-4.5" x2="0.21" y2="-4.5" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<polygon points="0.31,-4.525 0.21,-4.5 0.31,-4.475 " stroke-width="0.0094118" fill="black" />
-<text transform="translate(2.535,-4.4657) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" >Show mypage</text>
-<text transform="translate(2.9557,-4.6324) scale(1,-1) scale(0.0069444) " font-family="Helvetica,sans-serif" font-size="20px" stroke="none" fill="black" > </text>
-<line x1="0.1" y1="-4" x2="0.1" y2="-4.75" stroke-width="0.0094118" />
-<line x1="0.2" y1="-4" x2="0.2" y2="-4.75" stroke-width="0.0094118" />
-<line x1="0.1" y1="-4.75" x2="0.2" y2="-4.75" stroke-width="0.0094118" />
-<line x1="1.7" y1="-1.25" x2="1.7" y2="-4.75" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="3.75" y1="-4" x2="3.75" y2="-4.75" stroke-width="0.0094118" stroke-dasharray="0.05, 0.05"/>
-<line x1="5.75" y1="-4.25" x2="5.75" y2="-4.75" stroke-width="0.0094118" />
-<line x1="5.85" y1="-4.25" x2="5.85" y2="-4.75" stroke-width="0.0094118" />
-<line x1="5.75" y1="-4.75" x2="5.85" y2="-4.75" stroke-width="0.0094118" />
-</g>
-</svg>
-
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="810" height="840" viewBox="0 0 810 840"><g transform="translate(20,0)"><path d="M74,64 a30,30 0 0,0 -27,-27 a16,18 0 1,0 -16,0 a30,30 0, 0,0 -27,27 z" stroke-width="3" fill="#dcd7d7" stroke="#3c4260"/></g>
+<text x="42" y="60" font-family="'Roboto Condensed', sans-serif" font-size="12" fill="#3c4260">Student</text>
+<line x1="60" y1="65" x2="60" y2="790" stroke="#3c4260" stroke-width="3"/>
+<rect fill="#dcd7d7" stroke="#3c4260" rx="2" ry="2" x="210" y="10" width="100" height="55" stroke-width="3"/>
+<text x="220" y="30" font-family="'Roboto Condensed', sans-serif" font-size="12" fill="#3c4260">Partner Site</text>
+<line x1="260" y1="65" x2="260" y2="230" stroke="#3c4260" stroke-width="3"/>
+<rect fill="#dcd7d7" stroke="#3c4260" rx="2" ry="2" x="410" y="10" width="100" height="55" stroke-width="3"/>
+<text x="420" y="30" font-family="'Roboto Condensed', sans-serif" font-size="12" fill="#3c4260">Web App</text>
+<line x1="460" y1="65" x2="460" y2="710" stroke="#3c4260" stroke-width="3"/>
+<rect fill="#dcd7d7" stroke="#3c4260" rx="2" ry="2" x="610" y="10" width="100" height="55" stroke-width="3"/>
+<text x="620" y="30" font-family="'Roboto Condensed', sans-serif" font-size="12" fill="#3c4260">Reg API</text>
+<line x1="660" y1="65" x2="660" y2="790" stroke="#3c4260" stroke-width="3"/>
+<polygon points="250,95 260,100 250,105" fill="#3c4260"/>
+<line x1="60" y1="100" x2="250" y2="100" stroke="#3c4260" stroke-width="2" />
+<text x="100" y="95" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Choose course(S)</text>
+<polygon points="650,135 660,140 650,145" fill="#3c4260"/>
+<line x1="260" y1="140" x2="650" y2="140" stroke="#3c4260" stroke-width="2" />
+<text x="300" y="135" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Issue key for(S)</text>
+<polygon points="270,175 260,180 270,185" fill="#3c4260"/>
+<line x1="270" y1="180" x2="660" y2="180" stroke="#3c4260" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="310" y="175" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Registration key(K)</text>
+<polygon points="450,215 460,220 450,225" fill="#3c4260"/>
+<line x1="260" y1="220" x2="450" y2="220" stroke="#3c4260" stroke-width="2" />
+<text x="300" y="215" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Register with key(K)</text>
+<polygon points="70,255 60,260 70,265" fill="#3c4260"/>
+<line x1="70" y1="260" x2="460" y2="260" stroke="#3c4260" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="110" y="255" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Registration form</text>
+<polygon points="450,295 460,300 450,305" fill="#3c4260"/>
+<line x1="60" y1="300" x2="450" y2="300" stroke="#3c4260" stroke-width="2" />
+<text x="100" y="295" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Fill the form(F)</text>
+<polyline points="460,340 510,340 510,380 465,380" fill="none" stroke-width="2" stroke-linejoin="round" stroke="#3c4260" />
+<polygon points="470,375 460,380 470,385" fill="#3c4260"/>
+<text x="470" y="335" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Save the form(F)</text>
+<polygon points="650,415 660,420 650,425" fill="#3c4260"/>
+<line x1="460" y1="420" x2="650" y2="420" stroke="#3c4260" stroke-width="2" />
+<text x="500" y="415" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Register(K, F)</text>
+<path fill="#eeeeee" d="M620,421 L620,430 H475 V475 H650 V430 H630 z" />
+<text x="480" y="443" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">
+<tspan x="480" y="443"> New API</tspan>
+</text>
+<polyline points="660,500 710,500 710,540 665,540" fill="none" stroke-width="2" stroke-linejoin="round" stroke="#3c4260" />
+<polygon points="670,535 660,540 670,545" fill="#3c4260"/>
+<text x="670" y="495" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Create course</text>
+<polygon points="470,575 460,580 470,585" fill="#3c4260"/>
+<line x1="470" y1="580" x2="660" y2="580" stroke="#3c4260" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="510" y="575" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Course details(C)</text>
+<polyline points="460,620 510,620 510,660 465,660" fill="none" stroke-width="2" stroke-linejoin="round" stroke="#3c4260" />
+<polygon points="470,655 460,660 470,665" fill="#3c4260"/>
+<text x="470" y="615" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Save(C)</text>
+<polygon points="70,695 60,700 70,705" fill="#3c4260"/>
+<line x1="70" y1="700" x2="460" y2="700" stroke="#3c4260" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="110" y="695" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Show course summary</text>
+<polygon points="650,735 660,740 650,745" fill="#3c4260"/>
+<line x1="60" y1="740" x2="650" y2="740" stroke="#3c4260" stroke-width="2" />
+<text x="100" y="735" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Click study button</text>
+<polygon points="70,775 60,780 70,785" fill="#3c4260"/>
+<line x1="70" y1="780" x2="660" y2="780" stroke="#3c4260" stroke-width="2" stroke-dasharray="4,2"/>
+<text x="110" y="775" font-family="'Roboto Condensed', sans-serif" font-size="11" fill="#3c4260">Show mypage</text></svg>
 </div>
-<h2>Example</h2>
+<h2>Code block</h2>
 <div class="highlight"><pre><span class="k">def</span> <span class="nf">block_code</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="n">language</span><span class="p">)</span>
   <span class="k">case</span> <span class="n">language</span>
   <span class="k">when</span> <span class="s1">&#39;pseudo&#39;</span><span class="p">,</span> <span class="s1">&#39;pseudocode&#39;</span>
