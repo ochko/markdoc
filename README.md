@@ -20,6 +20,10 @@ It converts markdown codeblocks for diagrams using [Graphviz](http://www.graphvi
 
 `$ apt-get install graphviz`
 
+### Linux (fedora, rhel or centos)
+   
+`$ yum install graphviz`
+
 
 ## Installing
 
