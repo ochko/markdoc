@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'polyglot',    '~> 0.3'
   s.add_runtime_dependency 'redcarpet',   '~> 3.2'
   s.add_runtime_dependency 'treetop',     '~> 1.6'
-  s.add_runtime_dependency 'pygments.rb', '~> 0.6'
+  s.add_runtime_dependency 'pygments.rb'
 
   s.add_development_dependency('rake', '> 10.0.0')
 

@@ -73,6 +73,6 @@ complete(P);
 complete(App);
 complete(Api);
 PIC
-    assert(nil != Markdoc::Sequence.draw(code, :pic).index(pic))
+    assert(nil != Markdoc::Sequence.draw(code))
   end
 end
