@@ -1,8 +1,10 @@
 require './lib/markdoc/version'
+require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'markdoc'
   s.version     = Markdoc::VERSION
+  s.date        = Date.today.to_s
   s.summary     = "Markdown to HTML converter with diagrams"
   s.description = "Markdown with support for pseudocode to flowchart and sequence diagram generation"
   s.authors     = ["Lkhagva Ochirkhuyag"]
