@@ -1,4 +1,5 @@
 require './lib/markdoc/version'
+require 'date'
 
 Gem::Specification.new do |s|
   s.name        = 'markdoc'
