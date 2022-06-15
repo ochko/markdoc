@@ -9,19 +9,19 @@ It converts markdown codeblocks for diagrams using [Graphviz](http://www.graphvi
 
 ## System requirements
 
-- Ruby 1.9.2 and up
-- Graphviz (tested with dot version 2.38.0)
+- Ruby 2.7.6 and up
+- Graphviz (tested with dot version 3.0.0)
 
-### OS X
+#### OS X
 
 `$ brew install graphviz`
 
-### Linux (deb)
+#### Linux (debian, ubuntu)
 
 `$ apt-get install graphviz`
 
-### Linux (fedora, rhel or centos)
-   
+#### Linux (fedora, rhel or centos)
+
 `$ yum install graphviz`
 
 
@@ -145,7 +145,7 @@ Fork the repo, and send a pull request. I promise I will merge almost all PR's a
 
 The MIT License (MIT)
 
-Copyright (c) Lkhagva Ochirkhuyag, 2015
+Copyright (c) Lkhagva Ochirkhuyag, 2022
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
