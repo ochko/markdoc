@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'polyglot'
 require 'treetop'
 
@@ -13,14 +15,17 @@ module Markdoc
 
     class ActionLiteral < Treetop::Runtime::SyntaxNode
       def out(file)
-        file.write %Q(#{id} [shape=box label="#{label}"]\n)
+        file.write %(#{id} [shape=box label="#{label}"]\n)
       end
+
       def id
         sentence.id
       end
+
       def label
         sentence.value
       end
+
       def ends
         [id]
       end
@@ -28,33 +33,34 @@ module Markdoc
 
     class IfLiteral < Treetop::Runtime::SyntaxNode
       def out(file)
-        file.write %Q(#{id} [shape=diamond label="#{cond.value}"]\n)
+        file.write %(#{id} [shape=diamond label="#{cond.value}"]\n)
 
         unless yes.nil?
           yes.out(file)
-          file.write %Q(  #{id} -> #{yes.id} [label="Yes"]\n)
+          file.write %(  #{id} -> #{yes.id} [label="Yes"]\n)
         end
         unless no.nil?
           no.out(file)
-          file.write %Q(  #{id} -> #{no.id} [label="No"]\n)
+          file.write %(  #{id} -> #{no.id} [label="No"]\n)
         end
       end
 
       def id
         cond.id
       end
+
       def ends
         ary = []
-        if yes.elements.empty?
-          ary << yes.id
-        else
-          ary << yes.elements.last.ends
-        end
-        if no.elements.empty?
-          ary << no.id
-        else
-          ary << no.elements.last.ends
-        end
+        ary << if yes.elements.empty?
+                 yes.id
+               else
+                 yes.elements.last.ends
+               end
+        ary << if no.elements.empty?
+                 no.id
+               else
+                 no.elements.last.ends
+               end
         ary.flatten
       end
     end
@@ -63,6 +69,7 @@ module Markdoc
       def value
         text_value.strip
       end
+
       def id
         @id ||= Register.id
       end
@@ -73,11 +80,10 @@ module Markdoc
         prev = nil
         elements.each do |node|
           next if node.nil?
+
           node.out(file)
-          unless prev.nil?
-            prev.ends.each do |endid|
-              file.write %Q(#{endid} -> #{node.id}\n)
-            end
+          prev&.ends&.each do |endid|
+            file.write %(#{endid} -> #{node.id}\n)
           end
           prev = node
         end
@@ -90,11 +96,11 @@ module Markdoc
       def ends
         ary = []
         elements.each do |node|
-          if node.elements.empty?
-            ary << node.id
-          else
-            ary << node.ends
-          end
+          ary << if node.elements.empty?
+                   node.id
+                 else
+                   node.ends
+                 end
         end
         ary.flatten
       end
@@ -104,7 +110,7 @@ module Markdoc
       parser = PseudocodeParser.new
       tree = parser.parse(code)
 
-      if(tree.nil?)
+      if tree.nil?
         puts parser.failure_reason
         raise "Can't generate graphviz code"
       else
@@ -118,9 +124,7 @@ module Markdoc
           graphviz = file.path
         end
 
-        if format == :graphviz
-          return IO.read(graphviz)
-        end
+        return IO.read(graphviz) if format == :graphviz
 
         image = Tempfile.new([digest, ".#{format}"])
         image.close

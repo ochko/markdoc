@@ -1,9 +1,10 @@
+# frozen_string_literal: true
+
 require 'redcarpet'
 require 'pygments'
 
 module Markdoc
   class Renderer < Redcarpet::Render::HTML
-
     def block_code(code, language)
       case language
       when 'pseudo', 'pseudocode'
@@ -17,27 +18,27 @@ module Markdoc
 
     # removes xml or doctype meta info
     def wrap_svg(source)
-      stripped = source.
-                 sub(/<\?xml[^>]+>/i, '').
-                 sub(/<!DOCTYPE[^>]+>/im, '').
-                 gsub(/<!\-\-[^>]+\-\->/, '')
+      stripped = source
+                 .sub(/<\?xml[^>]+>/i, '')
+                 .sub(/<!DOCTYPE[^>]+>/im, '')
+                 .gsub(/<!--[^>]+-->/, '')
 
-      %Q(<div class="svg-holder">\n#{stripped}\n</div>)
+      %(<div class="svg-holder">\n#{stripped}\n</div>)
     end
 
     def doc_header
-      <<-END
-<html>
-<head>
-  <title>Doc</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <style>
-#{IO.read File.expand_path('../../../css/style.css', __FILE__)}
-#{IO.read File.expand_path('../../../css/pygments.css', __FILE__)}
-  </style>
-</head>
-<body>
-END
+      <<~HEADER
+        <html>
+        <head>
+          <title>Doc</title>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <style>
+        #{IO.read File.expand_path('../../css/style.css', __dir__)}
+        #{IO.read File.expand_path('../../css/pygments.css', __dir__)}
+          </style>
+        </head>
+        <body>
+      HEADER
     end
 
     def doc_footer

@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # Sequence definition to image converter using sequence.pic macros.
 #   http://www.umlgraph.org/doc/seq-intro.html
